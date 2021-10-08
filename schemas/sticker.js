@@ -6,7 +6,15 @@ export default {
 	icon: BiSticker,
 	type: 'document',
 	fields: [
-		{ name: 'image', type: 'image', },
+		{
+			name: 'image',
+			type: 'object',
+			options: { collapsible: true, collapsed: false, columns: 2, },
+			fields: [
+				{ name: 'face', type: 'image', },
+				{ name: 'original', type: 'image', },
+			],
+		},
 		{
 			name: 'emotion',
 			type: 'object',
@@ -45,12 +53,12 @@ export default {
 		select: {
 			emotion: 'emotion',
 			meta: 'meta',
-			media: 'image',
+			media: 'image.face',
 		},
 		prepare({ emotion, meta, ...selection }) {
 			return {
-				title: `${emotion.emoji} — lv. ${emotion.level}`,
-				subtitle: [meta.date, meta.description].filter(Boolean).join` — `,
+				title: `${emotion.emoji || '😶'} — lv. ${emotion.level}`,
+				subtitle: [meta?.date, meta?.description].filter(Boolean).join` — `,
 				...selection,
 			};
 		},
