@@ -13,6 +13,7 @@ export default {
 			fields: [
 				{ name: 'face', type: 'image', },
 				{ name: 'original', type: 'image', },
+				{ name: 'source', type: 'url', },
 			],
 		},
 		{
@@ -45,7 +46,7 @@ export default {
 			options: { collapsible: true, collapsed: false, columns: 2, },
 			fields: [
 				{ name: 'date', type: 'date', },
-				{ name: 'description', type: 'text', rows: 3 },
+				{ name: 'description', type: 'text', rows: 5 },
 			],
 		},
 	],

@@ -1700,10 +1700,10 @@
     date-fns "^2.16.1"
     lodash "^4.17.15"
 
-"@sanity/vision@^2.21.1":
-  version "2.21.1"
-  resolved "https://registry.npmjs.org/@sanity/vision/-/vision-2.21.1.tgz#042fc5650596a731b36b6a7645fad3ee3fc6680a"
-  integrity sha512-+hQySuZzane7KQl4lSnunq47XAI5lNgXfrwLEOyZGs+3QDw4moxCt2GsDF2I4nvAsqQCQ96e/dtMq26862aQjA==
+"@sanity/vision@^2.21.3":
+  version "2.21.3"
+  resolved "https://registry.npmjs.org/@sanity/vision/-/vision-2.21.3.tgz#81aad22c772a70e7ebfe6cab9e569c409f247f03"
+  integrity sha512-/nTrP0wvtvwFfGWlK2R5eqJ7uqZ4EF7gsYWzTtVHAN/ZjMXI8kYJb6lE5vu/4A+RNmeZ8d9NheILI/69jebNEA==
   dependencies:
     "@sanity/icons" "^1.2.1"
     "@sanity/ui" "^0.36.12"
