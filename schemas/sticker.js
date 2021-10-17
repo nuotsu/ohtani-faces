@@ -23,19 +23,8 @@ export default {
 			fields: [
 				{
 					name: 'emoji',
+					title: 'Emojis',
 					type: 'string',
-					description: 'Emoji only',
-				},
-				{
-					name: 'level',
-					type: 'number',
-					description: '1 to 5',
-					initialValue: 3,
-					validation: Rule => [
-						Rule.required()
-						.min(1)
-						.max(5)
-					]
 				},
 			],
 		},
@@ -57,10 +46,8 @@ export default {
 			media: 'image.face',
 		},
 		prepare({ emotion, meta, ...selection }) {
-			const level = new Array(emotion.level).fill`★`.join``
-
 			return {
-				title: `${emotion.emoji || '😶'} ${level}`,
+				title: emotion.emoji || '😶',
 				subtitle: [meta?.date, meta?.description].filter(Boolean).join` — `,
 				...selection,
 			};
