@@ -53,4 +53,16 @@ export default {
 			};
 		},
 	},
+	orderings: [
+		{
+			title: 'Date',
+			name: 'dateDesc',
+			by: [{ field: 'meta.date', direction: 'desc' }]
+		},
+		{
+			title: 'Emoji',
+			name: 'emojiAsc',
+			by: [{ field: 'emotion.emoji', direction: 'asc' }]
+		},
+	]
 }
