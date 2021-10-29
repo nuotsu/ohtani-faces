@@ -14,6 +14,7 @@ export default {
 				{ name: 'face', type: 'image', },
 				{ name: 'original', type: 'image', },
 				{ name: 'source', type: 'url', },
+				{ name: 'gettyEmbed', type: 'text', rows: 2, },
 			],
 		},
 		{
