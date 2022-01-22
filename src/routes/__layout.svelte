@@ -2,7 +2,7 @@
 
 <slot />
 
-<script context="module">
+<script context="module" lang="ts">
 	import client from '$lib/sanity'
 	import runes from 'runes'
 
