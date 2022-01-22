@@ -2,14 +2,14 @@
 
 // Sticker
 
-interface Sticker {
+type Sticker = {
 	_id: string
 	image: StickerImage
 	emotion: StickerEmoji
 	meta?: StickerMeta
 }
 
-interface StickerImage {
+type StickerImage = {
 	face: string
 	original: string
 	originalUrl: string
@@ -17,11 +17,11 @@ interface StickerImage {
 	embed: string
 }
 
-interface StickerEmoji {
+type StickerEmoji = {
 	emoji: string
 }
 
-interface StickerMeta {
+type StickerMeta = {
 	date?: string
 	description?: string
 }
@@ -32,7 +32,7 @@ type Emoji = string
 
 // stuff
 
-interface Stuff {
+type Stuff = {
 	stickers?: Sticker[]
 	emojis?: Emoji[]
 }
