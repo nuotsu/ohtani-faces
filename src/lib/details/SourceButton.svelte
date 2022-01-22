@@ -1,8 +1,12 @@
-<a class="action" href={source} target="_blank">Source</a>
+<Action
+	image={!!$selectedSticker && $selectedSticker.image.original}
+	href={!!$selectedSticker && ($selectedSticker.image.source || $selectedSticker.image.originalUrl)}
+	target="_blank"
+>
+	Source
+</Action>
 
 <script>
+	import Action from './Action.svelte'
 	import { selectedSticker } from '$lib/utils/store'
-
-	$: source =
-		$selectedSticker && ($selectedSticker.image.source || $selectedSticker.image.originalUrl)
 </script>

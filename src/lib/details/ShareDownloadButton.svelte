@@ -1,16 +1,19 @@
 {#if !navigator.canShare}
-	<a class="action" href={downloadUrl}>Download</a>
+	<Action {image} href={downloadUrl}>Download</Action>
 {:else}
 	{#await prepareShare(downloadUrl)}
-		<button class="action" disabled>Loading...</button>
+		<Action disabled>Loading...</Action>
 	{:then shareData}
-		<button class="action" on:click={() => navigator.share(shareData)}>Share</button>
+		<Action on:click={() => navigator.share(shareData)}>Share</Action>
 	{/await}
 {/if}
 
 <script lang="ts">
+	import Action from './Action.svelte'
 	import { urlFor } from '$lib/utils/sanity'
 	import { selectedSticker } from '$lib/utils/store'
+
+	$: image = !!$selectedSticker && $selectedSticker.image.face
 
 	$: filename = !!$selectedSticker && `shohei-ohtani-${$selectedSticker.emotion.emoji}`
 

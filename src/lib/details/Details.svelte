@@ -1,5 +1,5 @@
 {#if !!$selectedSticker}
-	<aside class="screen">
+	<aside class="screen rounded-t">
 		<h2 class="text-3xl">
 			{#each emojis as emoji}
 				<Emoji {emoji} />
@@ -18,6 +18,10 @@
 		left: 50%;
 		bottom: 0;
 		transform: translateX(-50%);
+	}
+
+	h2 {
+		text-align: center;
 	}
 </style>
 
