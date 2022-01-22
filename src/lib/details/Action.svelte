@@ -1,12 +1,12 @@
 {#if !!href}
 	<a class="root" {href} {target}>
-		<ActionContent {image}>
+		<ActionContent {image} {className}>
 			<slot />
 		</ActionContent>
 	</a>
 {:else}
 	<button class="root" on:click {disabled}>
-		<ActionContent {image}>
+		<ActionContent {image} {className}>
 			<slot />
 		</ActionContent>
 	</button>
@@ -31,4 +31,5 @@
 	export let href: string | null = null
 	export let target: '_blank' | null = null
 	export let disabled: boolean | null = null
+	export let className: string | null = null
 </script>

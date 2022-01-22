@@ -4,7 +4,7 @@
 
 {#if !!image}
 	<figure>
-		<img {src} alt="" draggable="false" />
+		<img {src} class="drop-shadow-md {className}" alt="" draggable="false" />
 	</figure>
 {/if}
 
@@ -23,7 +23,8 @@
 <script lang="ts">
 	import { urlFor } from '$lib/utils/sanity'
 
-	export let image
+	export let image: string | null = null
+	export let className: string | null = null
 
 	$: src = !!image && urlFor(image).height(160).url()
 </script>

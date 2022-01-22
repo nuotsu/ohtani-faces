@@ -1,3 +1,5 @@
+<svelte:window on:keyup={onKeyup} />
+
 {#if !!$selectedSticker}
 	<aside class="screen rounded-t">
 		<h2 class="text-3xl">
@@ -33,4 +35,10 @@
 	import { selectedSticker } from '$lib/utils/store'
 
 	$: emojis = !!$selectedSticker && runes($selectedSticker.emotion.emoji)
+
+	function onKeyup(e: KeyboardEvent) {
+		if (!!$selectedSticker && e.key === 'Escape') {
+			$selectedSticker = false
+		}
+	}
 </script>
