@@ -3,7 +3,7 @@
 <slot />
 
 <script context="module" lang="ts">
-	import client from '$lib/sanity'
+	import client from '$lib/utils/sanity'
 	import runes from 'runes'
 
 	export async function load() {

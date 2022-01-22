@@ -10,6 +10,7 @@
 	ul {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+		gap: 3px;
 
 		@apply <sm:grid-cols-4;
 	}

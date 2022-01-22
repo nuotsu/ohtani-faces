@@ -4,6 +4,8 @@
 
 <style>
 	figure {
+		position: relative;
+		z-index: 1;
 		display: grid;
 		place-content: center;
 	}
@@ -14,7 +16,7 @@
 </style>
 
 <script lang="ts">
-	import { urlFor } from '$lib/sanity'
+	import { urlFor } from '$lib/utils/sanity'
 
 	export let sticker: Sticker
 	export let emojis: string

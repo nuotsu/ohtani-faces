@@ -10,10 +10,11 @@
 		left: 0;
 		bottom: 0;
 		display: flex;
+		margin: 0.25rem;
 	}
 
 	span {
-		margin-right: var(--gap);
+		margin-right: var(--gap, -0.4em);
 		@apply transition-all;
 	}
 </style>
