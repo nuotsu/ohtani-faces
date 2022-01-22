@@ -11,7 +11,7 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 
-		@apply <md:grid-cols-4;
+		@apply <sm:grid-cols-4;
 	}
 </style>
 

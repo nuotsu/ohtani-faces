@@ -6,7 +6,7 @@ interface Sticker {
 	_id: string
 	image: StickerImage
 	emotion: StickerEmoji
-	meta: string
+	meta?: StickerMeta
 }
 
 interface StickerImage {
@@ -22,8 +22,8 @@ interface StickerEmoji {
 }
 
 interface StickerMeta {
-	date: string
-	description: string
+	date?: string
+	description?: string
 }
 
 // Emoji
