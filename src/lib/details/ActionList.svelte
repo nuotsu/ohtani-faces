@@ -1,5 +1,9 @@
 <div>
-	<button class="action">Share</button>
-
-	<a class="action" href="#">Original</a>
+	<ShareDownloadButton />
+	<SourceButton />
 </div>
+
+<script lang="ts">
+	import ShareDownloadButton from './ShareDownloadButton.svelte'
+	import SourceButton from './SourceButton.svelte'
+</script>
