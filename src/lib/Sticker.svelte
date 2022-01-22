@@ -1,7 +1,15 @@
 <article>
-	{sticker._id}
+	<div>
+		{#each emojis as emoji}
+			{emoji}
+		{/each}
+	</div>
 </article>
 
-<script>
-	export let sticker
+<script lang="ts">
+	import runes from 'runes'
+
+	export let sticker: Sticker
+
+	let emojis = runes(sticker.emotion.emoji)
 </script>

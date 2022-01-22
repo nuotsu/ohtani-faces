@@ -7,7 +7,7 @@
 	import runes from 'runes'
 
 	export async function load() {
-		const stickers = await client.fetch(`
+		const stickers: Sticker[] = await client.fetch(`
 			*[_type == 'sticker'] | order(meta.date desc) {
 				_id,
 				image {
@@ -22,14 +22,14 @@
 			}
 		`)
 
-		const emojis = await client.fetch(`
+		const emojis: Emoji[] = await client.fetch(`
 			*[_type == 'sticker'].emotion.emoji
 		`)
 
 		return {
 			stuff: {
 				stickers,
-				emojis: [...new Set(runes(emojis.join``))].sort()
+				emojis: [...new Set(runes(emojis.join('')))].sort()
 			}
 		}
 	}
