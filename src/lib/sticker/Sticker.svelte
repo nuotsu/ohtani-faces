@@ -1,4 +1,4 @@
-<article class={random()}>
+<article class={random()} on:click={onClick}>
 	<StickerFace {sticker} {emojis} />
 	<StickerEmojis {emojis} />
 </article>
@@ -40,8 +40,13 @@
 	import StickerFace from './StickerFace.svelte'
 	import StickerEmojis from './StickerEmojis.svelte'
 	import random from '$lib/utils/random-color'
+	import { selectedSticker } from '$lib/utils/store'
 
 	export let sticker: Sticker
 
 	let emojis = sticker.emotion.emoji
+
+	function onClick(): void {
+		$selectedSticker = sticker
+	}
 </script>

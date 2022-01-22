@@ -1,6 +1,6 @@
 <div class:flex-wrap={expand}>
 	{#each emojis as emoji}
-		<Emoji {emoji} />
+		<Emoji {emoji} closeDetailsOnClick />
 	{/each}
 
 	<ExpandButton {expand} on:click={() => (expand = !expand)} />

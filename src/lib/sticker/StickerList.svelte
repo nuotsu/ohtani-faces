@@ -21,7 +21,7 @@
 <script lang="ts">
 	import Sticker from './Sticker.svelte'
 	import { page } from '$app/stores'
-	import { selectedEmoji } from './utils/store'
+	import { selectedEmoji } from '$lib/utils/store'
 
 	let { stickers }: Stuff = $page.stuff
 
