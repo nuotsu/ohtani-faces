@@ -1,4 +1,4 @@
-<div class:flex-wrap={expand}>
+<div class="screen text-xl" class:flex-wrap={expand}>
 	{#each emojis as emoji}
 		<Emoji {emoji} closeDetailsOnClick />
 	{/each}

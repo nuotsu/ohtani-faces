@@ -1,4 +1,4 @@
-<button class:expand on:click>
+<button class="action text-base" class:expand on:click>
 	{#if expand}
 		Collapse
 	{:else}
