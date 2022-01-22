@@ -23,19 +23,19 @@
 		`)
 
 		const emojis: Emoji[] = await client.fetch(`
-			*[_type == 'sticker'].emotion.emoji
+			*[_type == 'sticker'] | order(meta.date desc).emotion.emoji
 		`)
 
 		return {
 			stuff: {
 				stickers,
-				emojis: [...new Set(runes(emojis.join('')))].sort()
+				emojis: [...new Set(runes(emojis.join('')))]
 			}
 		}
 	}
 </script>
 
-<script>
+<script lang="ts">
 	import Header from '$lib/Header.svelte'
 	import '../app.css'
 </script>

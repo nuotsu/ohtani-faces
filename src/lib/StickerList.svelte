@@ -1,5 +1,5 @@
 <ul>
-	{#each stickers as sticker}
+	{#each filteredStickers as sticker (sticker._id)}
 		<li>
 			<Sticker {sticker} />
 		</li>
@@ -8,6 +8,8 @@
 
 <style>
 	ul {
+		position: relative;
+		z-index: 0;
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 		gap: 3px;
@@ -16,9 +18,14 @@
 	}
 </style>
 
-<script>
+<script lang="ts">
 	import Sticker from './Sticker.svelte'
 	import { page } from '$app/stores'
+	import { selectedEmoji } from './utils/store'
 
-	let { stickers } = $page.stuff
+	let { stickers }: Stuff = $page.stuff
+
+	$: filteredStickers = stickers.filter(sticker =>
+		!!$selectedEmoji ? sticker.emotion.emoji.includes($selectedEmoji) : stickers
+	)
 </script>

@@ -29,3 +29,10 @@ interface StickerMeta {
 // Emoji
 
 type Emoji = string
+
+// stuff
+
+interface Stuff {
+	stickers?: Sticker[]
+	emojis?: Emoji[]
+}

@@ -19,8 +19,8 @@
 	}
 </style>
 
-<script>
+<script lang="ts">
 	import runes from 'runes'
 
-	export let emojis
+	export let emojis: Emoji[]
 </script>
