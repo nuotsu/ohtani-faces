@@ -9,7 +9,12 @@
 {/if}
 
 <style>
+	.action {
+		width: 100%;
+	}
+
 	figure {
+		width: 100%;
 		padding-inline: 1rem;
 
 		@apply transform transition-transform;

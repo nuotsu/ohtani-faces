@@ -20,7 +20,7 @@
 	}
 
 	.screen {
-		@apply border border-gray-50 bg-white bg-opacity-80 backdrop-blur-sm;
+		@apply bg-white bg-opacity-80 backdrop-blur;
 	}
 }
 
