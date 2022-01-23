@@ -5,9 +5,9 @@
 	</Action>
 {:else}
 	{#await prepareShare(downloadUrl)}
-		<Action disabled>Loading...</Action>
+		<Action {image} disabled>Loading...</Action>
 	{:then shareData}
-		<Action on:click={() => navigator.share(shareData)}>
+		<Action {image} on:click={() => navigator.share(shareData)}>
 			<ShareIcon />
 			Share
 		</Action>
