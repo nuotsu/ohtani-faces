@@ -13,6 +13,8 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 		gap: 3px;
+		padding: 3px;
+		background-color: #fff;
 
 		@apply <sm:grid-cols-4;
 	}

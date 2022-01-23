@@ -1,17 +1,19 @@
 <svelte:window on:keyup={onKeyup} />
 
 {#if !!$selectedSticker}
-	<aside class="screen rounded-t">
-		<h2 class="text-3xl">
-			{#each emojis as emoji}
-				<Emoji {emoji} />
-			{/each}
-		</h2>
+	{#key $selectedSticker._id}
+		<aside class="screen rounded-t" transition:slide>
+			<h2 class="text-3xl anim-fadein">
+				{#each emojis as emoji}
+					<Emoji {emoji} />
+				{/each}
+			</h2>
 
-		<ActionList />
+			<ActionList />
 
-		<CloseButton />
-	</aside>
+			<CloseButton />
+		</aside>
+	{/key}
 {/if}
 
 <style>
@@ -20,14 +22,20 @@
 		left: 50%;
 		bottom: 0;
 		transform: translateX(-50%);
+		width: 450px;
+		max-width: 100%;
+		padding: 0.5rem;
+		padding-bottom: calc(1rem + env(safe-area-inset-bottom));
 	}
 
 	h2 {
+		margin-top: -0.5em;
 		text-align: center;
 	}
 </style>
 
 <script lang="ts">
+	import { slide } from 'svelte/transition'
 	import CloseButton from './CloseButton.svelte'
 	import Emoji from '$lib/emoji/Emoji.svelte'
 	import ActionList from './ActionList.svelte'

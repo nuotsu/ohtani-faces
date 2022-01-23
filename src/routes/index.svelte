@@ -1,7 +1,19 @@
-<Header />
-<EmojiList />
-<StickerList />
+<div>
+	<Header />
+	<EmojiList />
+	<StickerList />
+	<Footer />
+</div>
+
 <Details />
+
+<style>
+	div {
+		display: grid;
+		gap: 0.8rem;
+		padding-block: 1rem;
+	}
+</style>
 
 <script context="module" lang="ts">
 	import client from '$lib/utils/sanity'
@@ -41,5 +53,6 @@
 	import EmojiList from '$lib/emoji/EmojiList.svelte'
 	import StickerList from '$lib/sticker/StickerList.svelte'
 	import Details from '$lib/details/Details.svelte'
+	import Footer from '$lib/Footer.svelte'
 	import '../app.css'
 </script>

@@ -2,9 +2,9 @@
 	image={!!$selectedSticker && $selectedSticker.image.original}
 	href={!!$selectedSticker && ($selectedSticker.image.source || $selectedSticker.image.originalUrl)}
 	target="_blank"
-	className="rotate-1 rounded"
+	className="rotate-2 rounded"
 >
-	Source
+	Original
 </Action>
 
 <script>

@@ -3,7 +3,7 @@
 </div>
 
 {#if !!image}
-	<figure>
+	<figure class="anim-fadein">
 		<img {src} class="drop-shadow-md {className}" alt="" draggable="false" />
 	</figure>
 {/if}
@@ -17,6 +17,8 @@
 
 	img {
 		margin-inline: auto;
+		height: 80px;
+		object-fit: cover;
 	}
 </style>
 

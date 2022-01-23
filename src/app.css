@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	body {
+		@apply bg-gray-100;
+	}
+}
+
 @layer components {
 	.action {
 		display: inline-block;
@@ -14,5 +20,26 @@
 
 	.screen {
 		@apply bg-white bg-opacity-80 backdrop-blur-sm;
+	}
+}
+
+@layer utilities {
+	.no-scrollbar::-webkit-scrollbar {
+		@apply hidden;
+	}
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+
+	.anim-fadein {
+		opacity: 0;
+		animation: fadein 0.2s ease-in-out 0.4s forwards;
+	}
+
+	@keyframes fadein {
+		to {
+			opacity: 1;
+		}
 	}
 }
