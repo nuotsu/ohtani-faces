@@ -15,7 +15,7 @@
 		color: #fff;
 		text-align: center;
 
-		@apply rounded shadow-md bg-gradient-to-tr from-rose-700 to-rose-400
+		@apply rounded shadow-md shadow-rose-200  bg-gradient-to-tr from-rose-700 to-rose-400
 			hover:from-rose-600 hover:to-rose-300;
 	}
 
@@ -31,6 +31,13 @@
 	.no-scrollbar {
 		-ms-overflow-style: none; /* IE and Edge */
 		scrollbar-width: none; /* Firefox */
+	}
+
+	.with-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5ch;
 	}
 
 	.anim-fadein {

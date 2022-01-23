@@ -1,4 +1,4 @@
-<div class="action">
+<div class="action with-icon">
 	<slot />
 </div>
 
