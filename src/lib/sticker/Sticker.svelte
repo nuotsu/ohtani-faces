@@ -11,6 +11,8 @@
 		place-content: center;
 		height: 100%;
 		padding: 0.5rem;
+
+		@apply transition-all;
 	}
 
 	.red { @apply bg-red-100; }
@@ -29,6 +31,14 @@
 	.fuchsia { @apply bg-fuchsia-100; }
 	.pink { @apply bg-pink-100; }
 	.rose { @apply bg-rose-100; }
+
+	article:hover {
+		z-index: 1;
+		box-shadow:
+			0 0 0 3px #fff,
+			0 2px 20px hsla(0, 0%, 0%, 0.15);
+		@apply scale-110 rounded;
+	}
 
 	article:hover :global(emojis) {
 		z-index: 2;

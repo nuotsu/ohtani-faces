@@ -6,5 +6,7 @@
 	footer {
 		padding-inline: 1rem;
 		text-align: center;
+
+		@apply text-gray-400;
 	}
 </style>

@@ -15,9 +15,10 @@
 		gap: 0.25ch;
 		overflow-x: auto;
 		padding: 0.25rem;
+		margin-inline: auto;
 		width: 100%;
 
-		@apply max-w-screen-md mx-auto text-xl md:rounded;
+		@apply max-w-screen-md text-xl md:rounded;
 	}
 
 	div:not(.expand)::after {

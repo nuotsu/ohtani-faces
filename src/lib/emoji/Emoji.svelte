@@ -2,6 +2,12 @@
 	{emoji}
 </button>
 
+<style>
+	button {
+		@apply transition-transform hover:scale-125;
+	}
+</style>
+
 <script lang="ts">
 	import { selectedEmoji, selectedSticker } from '$lib/utils/store'
 
