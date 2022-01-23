@@ -36,7 +36,7 @@ export default {
 			options: { collapsible: true, collapsed: false, columns: 2, },
 			fields: [
 				{ name: 'date', type: 'date', },
-				{ name: 'description', type: 'text', rows: 5 },
+				{ name: 'description', type: 'text', rows: 6 },
 			],
 		},
 	],
