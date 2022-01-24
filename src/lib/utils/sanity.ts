@@ -5,8 +5,7 @@ const client = sanityClient({
 	projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
 	dataset: import.meta.env.VITE_SANITY_DATASET,
 	apiVersion: '2021-10-06',
-	useCdn: true,
-	token: import.meta.env.VITE_SANITY_EDITOR_TOKEN
+	useCdn: true
 })
 
 export default client
