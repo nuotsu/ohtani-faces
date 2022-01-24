@@ -10,7 +10,6 @@
 			</h2>
 
 			<ActionList />
-			<StickerMeta meta={$selectedSticker.meta} />
 			<CloseButton />
 		</aside>
 	{/key}
@@ -43,12 +42,11 @@
 	import { slide } from 'svelte/transition'
 	import Emoji from '$lib/emoji/Emoji.svelte'
 	import ActionList from './ActionList.svelte'
-	import StickerMeta from './StickerMeta.svelte'
 	import CloseButton from './CloseButton.svelte'
 	import runes from 'runes'
 	import { selectedSticker } from '$lib/utils/store'
 
-	$: emojis = !!$selectedSticker && runes($selectedSticker.emotion.emoji)
+	$: emojis = !!$selectedSticker && runes($selectedSticker.emojis)
 
 	function onKeyup(e: KeyboardEvent) {
 		if (!!$selectedSticker && e.key === 'Escape') {

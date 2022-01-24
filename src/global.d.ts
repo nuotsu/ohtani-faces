@@ -5,7 +5,7 @@
 type Sticker = {
 	_id: string
 	image: StickerImage
-	emotion: StickerEmoji
+	emojis: Emoji[]
 	meta?: StickerMeta
 }
 
@@ -15,10 +15,6 @@ type StickerImage = {
 	originalUrl: string
 	source: string
 	embed: string
-}
-
-type StickerEmoji = {
-	emoji: string
 }
 
 type StickerMeta = {

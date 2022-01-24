@@ -1,5 +1,5 @@
 <figure>
-	<img {src} alt={sticker.meta.description || emojis} height="200" draggable="false" />
+	<img {src} alt={emojis} height="200" draggable="false" />
 </figure>
 
 <style>

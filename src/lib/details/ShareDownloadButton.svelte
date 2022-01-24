@@ -23,7 +23,7 @@
 
 	$: image = !!$selectedSticker && $selectedSticker.image.face
 
-	$: filename = !!$selectedSticker && `shohei-ohtani-${$selectedSticker.emotion.emoji}`
+	$: filename = !!$selectedSticker && `shohei-ohtani-${$selectedSticker.emojis}`
 
 	$: downloadUrl =
 		!!$selectedSticker &&

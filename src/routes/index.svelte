@@ -27,16 +27,15 @@
 					face,
 					original,
 					'originalUrl': original.asset->url,
-					source,
-					embed
+					source
 				},
-				emotion,
-				meta
+				emojis,
+				date
 			}
 		`)
 
 		const emojis: Emoji[] = await client.fetch(`
-			*[_type == 'sticker'] | order(meta.date desc).emotion.emoji
+			*[_type == 'sticker'] | order(meta.date desc).emojis
 		`)
 
 		return {

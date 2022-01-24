@@ -54,7 +54,7 @@
 
 	export let sticker: Sticker
 
-	let emojis = sticker.emotion.emoji
+	let emojis = sticker.emojis
 
 	function onClick(): void {
 		$selectedSticker = sticker

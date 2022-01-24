@@ -28,6 +28,6 @@
 	let { stickers }: Stuff = $page.stuff
 
 	$: filteredStickers = stickers.filter(sticker =>
-		!!$selectedEmoji ? sticker.emotion.emoji.includes($selectedEmoji) : stickers
+		!!$selectedEmoji ? sticker.emojis.includes($selectedEmoji) : stickers
 	)
 </script>
