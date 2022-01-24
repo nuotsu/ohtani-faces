@@ -4,7 +4,7 @@
 
 {#if !!image}
 	<figure class="anim-fadein">
-		<img {src} class="drop-shadow-md {className}" alt="" draggable="false" />
+		<img {src} class="drop-shadow-md {className}" {alt} draggable="false" />
 	</figure>
 {/if}
 
@@ -31,6 +31,7 @@
 	import { urlFor } from '$lib/utils/sanity'
 
 	export let image: string | null = null
+	export let alt: string = ''
 	export let className: string | null = null
 
 	$: src = !!image && urlFor(image).height(160).url()

@@ -1,12 +1,12 @@
 {#if !!href}
 	<a class="root" {href} {target}>
-		<ActionContent {image} {className}>
+		<ActionContent {image} {className} {alt}>
 			<slot />
 		</ActionContent>
 	</a>
 {:else}
 	<button class="root" on:click {disabled}>
-		<ActionContent {image} {className}>
+		<ActionContent {image} {className} {alt}>
 			<slot />
 		</ActionContent>
 	</button>
@@ -28,6 +28,7 @@
 	import ActionContent from './ActionContent.svelte'
 
 	export let image: string | null = null
+	export let alt: string = ''
 	export let href: string | null = null
 	export let target: '_blank' | null = null
 	export let disabled: boolean | null = null

@@ -6,8 +6,6 @@
 	<ExpandButton {expand} on:click={() => (expand = !expand)} />
 </div>
 
-<SelectedEmoji />
-
 <style>
 	div {
 		position: sticky;
@@ -34,7 +32,6 @@
 	import { page } from '$app/stores'
 	import Emoji from './Emoji.svelte'
 	import ExpandButton from './ExpandButton.svelte'
-	import SelectedEmoji from './SelectedEmoji.svelte'
 
 	let { emojis }: Stuff = $page.stuff
 
