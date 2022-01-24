@@ -12,7 +12,7 @@
 		top: 0;
 		z-index: 1;
 		display: flex;
-		gap: 0.25ch;
+		gap: 0.3ch;
 		overflow-x: auto;
 		padding: 0.25rem;
 		margin-inline: auto;
