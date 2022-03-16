@@ -21,22 +21,21 @@
 	import runes from 'runes'
 
 	export async function load() {
-		const stickers: Sticker[] = await client.fetch(`
-			*[_type == 'sticker']|order(date desc) {
-				_id,
-				image {
-					face,
-					original,
-					'originalUrl': original.asset->url,
-					source
+		const { stickers, emojis } = await client.fetch(`
+			{
+				'stickers': *[_type == 'sticker']|order(date desc) {
+					_id,
+					image {
+						face,
+						original,
+						'originalUrl': original.asset->url,
+						source
+					},
+					emojis,
+					date
 				},
-				emojis,
-				date
+				'emojis': *[_type == 'sticker']|order(date desc).emojis
 			}
-		`)
-
-		const emojis: Emoji[] = await client.fetch(`
-			*[_type == 'sticker']|order(date desc).emojis
 		`)
 
 		return {
