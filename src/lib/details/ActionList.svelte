@@ -12,7 +12,7 @@
 	}
 </style>
 
-<script lang="ts">
+<script>
 	import ShareDownloadButton from './ShareDownloadButton.svelte'
 	import SourceButton from './SourceButton.svelte'
 </script>

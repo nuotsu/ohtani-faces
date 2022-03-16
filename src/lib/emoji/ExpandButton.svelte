@@ -17,6 +17,6 @@
 	}
 </style>
 
-<script lang="ts">
-	export let expand: boolean
+<script>
+	export let expand
 </script>

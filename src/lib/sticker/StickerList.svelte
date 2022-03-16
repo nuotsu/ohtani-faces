@@ -20,14 +20,15 @@
 	}
 </style>
 
-<script lang="ts">
+<script>
 	import Sticker from './Sticker.svelte'
 	import { page } from '$app/stores'
-	import { selectedEmoji } from '$lib/utils/store'
+	import { selectedEmoji } from '~/utils/store'
 
-	let { stickers }: Stuff = $page.stuff
+	let { stickers } = $page.stuff
 
-	$: filteredStickers = stickers.filter(sticker =>
-		!!$selectedEmoji ? sticker.emojis.includes($selectedEmoji) : stickers
+	$: filteredStickers = stickers.filter(sticker => !!$selectedEmoji
+		? sticker.emojis.includes($selectedEmoji)
+		: stickers
 	)
 </script>

@@ -16,11 +16,10 @@
 	}
 </style>
 
-<script lang="ts">
-	import { urlFor } from '$lib/utils/sanity'
+<script>
+	import { urlFor } from '~/utils/sanity'
 
-	export let sticker: Sticker
-	export let emojis: string
+	export let sticker, emojis
 
 	let src = urlFor(sticker.image.face).height(200).auto('format').url()
 </script>

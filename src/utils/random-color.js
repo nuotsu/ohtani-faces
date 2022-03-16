@@ -1,4 +1,4 @@
-const colors: string[] = [
+const colors = [
 	'red',
 	'orange',
 	'amber',
@@ -17,6 +17,6 @@ const colors: string[] = [
 	'rose'
 ]
 
-const random = (): string => colors[Math.floor(Math.random() * colors.length)]
+const random = () => colors[Math.floor(Math.random() * colors.length)]
 
 export default random

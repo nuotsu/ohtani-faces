@@ -27,12 +27,10 @@
 	}
 </style>
 
-<script lang="ts">
-	import { urlFor } from '$lib/utils/sanity'
+<script>
+	import { urlFor } from '~/utils/sanity'
 
-	export let image: string | null = null
-	export let alt: string = ''
-	export let className: string | null = null
+	export let image, alt = '', className
 
 	$: src = !!image && urlFor(image).height(160).url()
 </script>

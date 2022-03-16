@@ -28,12 +28,12 @@
 	}
 </style>
 
-<script lang="ts">
+<script>
 	import { page } from '$app/stores'
 	import Emoji from './Emoji.svelte'
 	import ExpandButton from './ExpandButton.svelte'
 
-	let { emojis }: Stuff = $page.stuff
+	let { emojis } = $page.stuff
 
-	let expand: boolean = false
+	let expand = false
 </script>

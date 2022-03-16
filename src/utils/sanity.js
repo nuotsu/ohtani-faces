@@ -12,6 +12,6 @@ export default client
 
 const builder = imageUrlBuilder(client)
 
-export function urlFor(source: string) {
+export function urlFor(source) {
 	return builder.image(source)
 }

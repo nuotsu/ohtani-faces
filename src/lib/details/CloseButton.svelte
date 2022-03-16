@@ -16,10 +16,10 @@
 	}
 </style>
 
-<script lang="ts">
-	import { selectedSticker } from '$lib/utils/store'
+<script>
+	import { selectedSticker } from '~/utils/store'
 
-	function onClick(): void {
+	function onClick() {
 		$selectedSticker = false
 	}
 </script>

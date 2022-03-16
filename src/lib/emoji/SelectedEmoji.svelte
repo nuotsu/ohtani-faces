@@ -32,12 +32,12 @@
 	}
 </style>
 
-<script lang="ts">
-	import { selectedEmoji } from '$lib/utils/store'
+<script>
+	import { selectedEmoji } from '~/utils/store'
 	import { fly } from 'svelte/transition'
 	import FilterIcon from '$lib/icon/Filter.svelte'
 
-	function onClick(): void {
+	function onClick() {
 		$selectedEmoji = false
 	}
 </script>

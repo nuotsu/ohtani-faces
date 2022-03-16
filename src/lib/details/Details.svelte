@@ -38,17 +38,17 @@
 	}
 </style>
 
-<script lang="ts">
+<script>
 	import { slide } from 'svelte/transition'
 	import Emoji from '$lib/emoji/Emoji.svelte'
 	import ActionList from './ActionList.svelte'
 	import CloseButton from './CloseButton.svelte'
 	import runes from 'runes'
-	import { selectedSticker } from '$lib/utils/store'
+	import { selectedSticker } from '~/utils/store'
 
 	$: emojis = !!$selectedSticker && runes($selectedSticker.emojis)
 
-	function onKeyup(e: KeyboardEvent) {
+	function onKeyup(e) {
 		if (!!$selectedSticker && e.key === 'Escape') {
 			$selectedSticker = false
 		}

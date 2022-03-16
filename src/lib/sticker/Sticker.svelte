@@ -46,17 +46,17 @@
 	}
 </style>
 
-<script lang="ts">
+<script>
 	import StickerFace from './StickerFace.svelte'
 	import StickerEmojis from './StickerEmojis.svelte'
-	import random from '$lib/utils/random-color'
-	import { selectedSticker } from '$lib/utils/store'
+	import random from '~/utils/random-color'
+	import { selectedSticker } from '~/utils/store'
 
-	export let sticker: Sticker
+	export let sticker
 
 	let emojis = sticker.emojis
 
-	function onClick(): void {
+	function onClick() {
 		$selectedSticker = sticker
 	}
 </script>

@@ -8,16 +8,15 @@
 	}
 </style>
 
-<script lang="ts">
-	import { selectedEmoji, selectedSticker } from '$lib/utils/store'
+<script>
+	import { selectedEmoji, selectedSticker } from '~/utils/store'
 
-	export let emoji: Emoji
-	export let closeDetailsOnClick: boolean = false
+	export let emoji, closeDetailsOnClick = false
 
 	$: selected = $selectedEmoji === emoji
 	$: unselected = !!$selectedEmoji && !selected
 
-	function onClick(emoji: Emoji): void {
+	function onClick(emoji) {
 		if (selected) {
 			$selectedEmoji = false
 		} else {

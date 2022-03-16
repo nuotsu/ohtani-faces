@@ -24,13 +24,8 @@
 	}
 </style>
 
-<script lang="ts">
+<script>
 	import ActionContent from './ActionContent.svelte'
 
-	export let image: string | null = null
-	export let alt: string = ''
-	export let href: string | null = null
-	export let target: '_blank' | null = null
-	export let disabled: boolean | null = null
-	export let className: string | null = null
+	export let image, alt = '', href, target, disabled, className
 </script>

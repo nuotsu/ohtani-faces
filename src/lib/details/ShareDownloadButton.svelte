@@ -14,10 +14,10 @@
 	{/await}
 {/if}
 
-<script lang="ts">
+<script>
 	import Action from './Action.svelte'
-	import { urlFor } from '$lib/utils/sanity'
-	import { selectedSticker } from '$lib/utils/store'
+	import { urlFor } from '~/utils/sanity'
+	import { selectedSticker } from '~/utils/store'
 	import DownloadIcon from '$lib/icon/Download.svelte'
 	import ShareIcon from '$lib/icon/Share.svelte'
 
@@ -29,7 +29,7 @@
 		!!$selectedSticker &&
 		urlFor($selectedSticker.image.face).height(200).forceDownload(filename).url()
 
-	async function prepareShare(url: string) {
+	async function prepareShare(url) {
 		let response = await fetch(url)
 		let blob = await response.blob()
 		let ext = blob.type.split('image/')[1]

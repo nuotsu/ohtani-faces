@@ -16,8 +16,8 @@
 	}
 </style>
 
-<script context="module" lang="ts">
-	import client from '$lib/utils/sanity'
+<script context="module">
+	import client from '~/utils/sanity'
 	import runes from 'runes'
 
 	export async function load() {
@@ -47,7 +47,7 @@
 	}
 </script>
 
-<script lang="ts">
+<script>
 	import Header from '$lib/Header.svelte'
 	import EmojiList from '$lib/emoji/EmojiList.svelte'
 	import SelectedEmoji from '$lib/emoji/SelectedEmoji.svelte'

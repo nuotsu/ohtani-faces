@@ -9,15 +9,14 @@
 	Original
 </Action>
 
-<script lang="ts">
+<script>
 	import Action from './Action.svelte'
 	import ExternalIcon from '$lib/icon/External.svelte'
-	import { selectedSticker } from '$lib/utils/store'
+	import { selectedSticker } from '~/utils/store'
 
-	let source: string = (!!$selectedSticker && $selectedSticker.image.source) || ''
+	let source = ($selectedSticker?.image.source) || ''
 
-	// prettier-ignore
-	let alt: string =
+	let alt =
 		source.includes('gettyimages') ? 'Copyright Getty Images' :
 		source.includes('instagram') ? 'Copyright Instagram' :
 		''
