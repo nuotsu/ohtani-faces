@@ -22,7 +22,7 @@
 
 	export async function load() {
 		const stickers: Sticker[] = await client.fetch(`
-			*[_type == 'sticker'] | order(meta.date desc) {
+			*[_type == 'sticker']|order(date desc) {
 				_id,
 				image {
 					face,
@@ -36,7 +36,7 @@
 		`)
 
 		const emojis: Emoji[] = await client.fetch(`
-			*[_type == 'sticker'] | order(meta.date desc).emojis
+			*[_type == 'sticker']|order(date desc).emojis
 		`)
 
 		return {
