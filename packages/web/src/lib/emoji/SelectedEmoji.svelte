@@ -1,32 +1,24 @@
 {#if !!$selectedEmoji}
-	<div transition:fly={{ x: 20 }}>
+	<div
+		class="flex items-center gap-[0.5ch] mx-auto my-2 max-w-max"
+		transition:fly={{ x: 20 }}
+	>
 		<span class="with-icon text-gray-400 text-xs">
 			<FilterIcon />
 			Filter:
 		</span>
 
-		<button on:click={onClick} title="Remove filter">
-			{$selectedEmoji}
-			<span>×</span>
+		<button
+			class="px-2 bg-white rounded-full"
+			title="Remove filter"
+			on:click={onClick}
+		>
+			{$selectedEmoji} <span>×</span>
 		</button>
 	</div>
 {/if}
 
 <style>
-	div {
-		display: flex;
-		align-items: center;
-		gap: 0.5ch;
-		margin-inline: auto;
-	}
-
-	button {
-		padding: 0 0.5em;
-		background-color: #fff;
-
-		@apply rounded-full;
-	}
-
 	button:not(:hover) span {
 		opacity: 0.2;
 	}
