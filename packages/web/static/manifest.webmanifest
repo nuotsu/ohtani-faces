@@ -1,6 +1,7 @@
 {
-	"short_name": "Ohtani Faces",
+	"short_name": "Ohtani.fun",
 	"name": "The Faces of Shohei Ohtani",
+	"start_url": "/?source=pwa",
 	"icons": [
 		{
 			"src": "/app-icon-180.png",
@@ -8,6 +9,7 @@
 			"sizes": "180x180"
 		}
 	],
-	"display": "standalone",
+	"display": "minimal-ui",
+	"background_color": "#ffffff",
 	"theme_color": "#e11d48"
 }
