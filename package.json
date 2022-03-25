@@ -1,0 +1,12 @@
+{
+  "name": "ohtani-faces",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/nuotsu/ohtani-faces.git",
+  "author": "Mitchell Christ <xzmaru@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
