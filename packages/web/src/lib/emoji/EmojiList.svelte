@@ -1,7 +1,9 @@
 <div class="screen no-scrollbar" class:expand class:flex-wrap={expand}>
 	{#each emojis as emoji}
-		<Emoji {emoji} closeDetailsOnClick />
+		<Emoji {emoji} {expand} closeDetailsOnClick />
 	{/each}
+
+	<FilterFavorites {expand} />
 
 	<ExpandButton {expand} on:click={() => (expand = !expand)} />
 </div>
@@ -31,6 +33,7 @@
 <script>
 	import { page } from '$app/stores'
 	import Emoji from './Emoji.svelte'
+	import FilterFavorites from './FilterFavorites.svelte'
 	import ExpandButton from './ExpandButton.svelte'
 
 	let { emojis } = $page.stuff

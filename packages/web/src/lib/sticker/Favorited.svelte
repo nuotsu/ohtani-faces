@@ -1,0 +1,25 @@
+{#if favorited}
+	<heart title="Favorite">
+		<HeartSolid height="1em" />
+	</heart>
+{/if}
+
+<style>
+	heart {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		margin: 0.5ch;
+
+		@apply text-red-300 drop-shadow;
+	}
+</style>
+
+<script>
+	import HeartSolid from '~/lib/icon/HeartSolid.svelte'
+	import { favorites } from '~/utils/store'
+
+	export let id
+
+	$: favorited = $favorites.includes(id)
+</script>

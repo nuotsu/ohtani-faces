@@ -1,4 +1,8 @@
-<button class:opacity-30={unselected} on:click={() => onClick(emoji)}>
+<button
+	class:opacity-30={unselected}
+	class:order-2={!expand}
+	on:click={onClick}
+>
 	{emoji}
 </button>
 
@@ -9,17 +13,18 @@
 </style>
 
 <script>
-	import { selectedEmoji, selectedSticker } from '~/utils/store'
+	import { favoritesFiltered, selectedEmoji, selectedSticker } from '~/utils/store'
 
-	export let emoji, closeDetailsOnClick = false
+	export let emoji, expand, closeDetailsOnClick = false
 
 	$: selected = $selectedEmoji === emoji
 	$: unselected = !!$selectedEmoji && !selected
 
-	function onClick(emoji) {
+	function onClick() {
 		if (selected) {
 			$selectedEmoji = false
 		} else {
+			$favoritesFiltered = false
 			$selectedEmoji = emoji
 
 			if (closeDetailsOnClick) $selectedSticker = false

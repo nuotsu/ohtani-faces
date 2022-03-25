@@ -1,4 +1,5 @@
 <article class={random()} on:click={onClick}>
+	<Favorited id={sticker._id} />
 	<StickerFace {sticker} {emojis} />
 	<StickerEmojis {emojis} />
 </article>
@@ -47,6 +48,7 @@
 </style>
 
 <script>
+	import Favorited from './Favorited.svelte'
 	import StickerFace from './StickerFace.svelte'
 	import StickerEmojis from './StickerEmojis.svelte'
 	import random from '~/utils/random-color'

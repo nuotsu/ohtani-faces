@@ -5,13 +5,13 @@
 	target="_blank"
 	className="rotate-2 rounded"
 >
-	<ExternalIcon />
+	<ExternalIcon height="1em" />
 	Original
 </Action>
 
 <script>
 	import Action from './Action.svelte'
-	import ExternalIcon from '$lib/icon/External.svelte'
+	import ExternalIcon from '~/lib/icon/External.svelte'
 	import { selectedSticker } from '~/utils/store'
 
 	let source = ($selectedSticker?.image.source) || ''

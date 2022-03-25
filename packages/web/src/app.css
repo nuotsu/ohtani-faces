@@ -20,22 +20,22 @@
 		color: #fff;
 		text-align: center;
 
-		@apply rounded shadow-md shadow-rose-200  bg-gradient-to-tr from-rose-700 to-rose-400
+		@apply
+			rounded shadow-md shadow-rose-200 bg-gradient-to-tr from-rose-700 to-rose-400
 			hover:from-rose-600 hover:to-rose-300;
 	}
 
 	.screen {
-		@apply bg-white bg-opacity-80 backdrop-blur;
+		backdrop-filter: blur(8px);
+		@apply bg-white bg-opacity-80;
 	}
 }
 
 @layer utilities {
-	.no-scrollbar::-webkit-scrollbar {
-		@apply hidden;
-	}
+	.no-scrollbar::-webkit-scrollbar { display: none; }
 	.no-scrollbar {
-		-ms-overflow-style: none; /* IE and Edge */
-		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none;
+		scrollbar-width: none;
 	}
 
 	.with-icon {
@@ -51,8 +51,6 @@
 	}
 
 	@keyframes fadein {
-		to {
-			opacity: 1;
-		}
+		to { opacity: 1; }
 	}
 }

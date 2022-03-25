@@ -1,6 +1,6 @@
 {#if !navigator.canShare}
 	<Action {image} href={downloadUrl}>
-		<DownloadIcon />
+		<DownloadIcon height="1em" />
 		Download
 	</Action>
 {:else}
@@ -8,7 +8,7 @@
 		<Action {image} disabled>Loading...</Action>
 	{:then shareData}
 		<Action {image} on:click={() => navigator.share(shareData)}>
-			<ShareIcon />
+			<ShareIcon height="1em" />
 			Share
 		</Action>
 	{/await}
@@ -18,8 +18,8 @@
 	import Action from './Action.svelte'
 	import { urlFor } from '~/utils/sanity'
 	import { selectedSticker } from '~/utils/store'
-	import DownloadIcon from '$lib/icon/Download.svelte'
-	import ShareIcon from '$lib/icon/Share.svelte'
+	import DownloadIcon from '~/lib/icon/Download.svelte'
+	import ShareIcon from '~/lib/icon/Share.svelte'
 
 	$: image = !!$selectedSticker && $selectedSticker.image.face
 

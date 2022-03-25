@@ -9,8 +9,13 @@
 				{/each}
 			</h2>
 
-			<ActionList />
-			<CloseButton />
+			<ActionList/>
+
+			<div class="text-center">
+				<AddToFavorite/>
+			</div>
+
+			<CloseButton height="1em" />
 		</aside>
 	{/key}
 {/if}
@@ -40,9 +45,10 @@
 
 <script>
 	import { slide } from 'svelte/transition'
-	import Emoji from '$lib/emoji/Emoji.svelte'
+	import Emoji from '~/lib/emoji/Emoji.svelte'
 	import ActionList from './ActionList.svelte'
 	import CloseButton from './CloseButton.svelte'
+	import AddToFavorite from './AddToFavorite.svelte'
 	import runes from 'runes'
 	import { selectedSticker } from '~/utils/store'
 

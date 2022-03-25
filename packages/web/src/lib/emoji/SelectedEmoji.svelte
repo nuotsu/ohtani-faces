@@ -35,7 +35,7 @@
 <script>
 	import { selectedEmoji } from '~/utils/store'
 	import { fly } from 'svelte/transition'
-	import FilterIcon from '$lib/icon/Filter.svelte'
+	import FilterIcon from '~/lib/icon/Filter.svelte'
 
 	function onClick() {
 		$selectedEmoji = false

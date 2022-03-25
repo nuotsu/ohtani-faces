@@ -48,11 +48,11 @@
 </script>
 
 <script>
-	import Header from '$lib/Header.svelte'
-	import EmojiList from '$lib/emoji/EmojiList.svelte'
-	import SelectedEmoji from '$lib/emoji/SelectedEmoji.svelte'
-	import StickerList from '$lib/sticker/StickerList.svelte'
-	import Details from '$lib/details/Details.svelte'
-	import Footer from '$lib/Footer.svelte'
+	import Header from '~/lib/Header.svelte'
+	import EmojiList from '~/lib/emoji/EmojiList.svelte'
+	import SelectedEmoji from '~/lib/emoji/SelectedEmoji.svelte'
+	import StickerList from '~/lib/sticker/StickerList.svelte'
+	import Details from '~/lib/details/Details.svelte'
+	import Footer from '~/lib/Footer.svelte'
 	import '../app.css'
 </script>

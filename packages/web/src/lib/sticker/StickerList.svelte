@@ -23,12 +23,19 @@
 <script>
 	import Sticker from './Sticker.svelte'
 	import { page } from '$app/stores'
-	import { selectedEmoji } from '~/utils/store'
+	import { favorites, favoritesFiltered, selectedEmoji } from '~/utils/store'
 
 	let { stickers } = $page.stuff
 
-	$: filteredStickers = stickers.filter(sticker => !!$selectedEmoji
-		? sticker.emojis.includes($selectedEmoji)
-		: stickers
-	)
+	$: filteredStickers = stickers.filter(sticker => {
+		if (!!$selectedEmoji) {
+			return sticker.emojis.includes($selectedEmoji)
+		}
+
+		if ($favoritesFiltered) {
+			return $favorites.includes(sticker._id)
+		}
+
+		return stickers
+	})
 </script>

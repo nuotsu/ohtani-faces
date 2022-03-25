@@ -1,4 +1,8 @@
-<button class="action text-base" class:expand on:click>
+<button
+	class="action text-base"
+	class:expand
+	on:click
+>
 	{#if expand}
 		Collapse
 	{:else}
@@ -12,9 +16,9 @@
 		right: 0;
 	}
 
-	.expand {
-		width: 100%;
-	}
+	.expand { width: 100%; }
+
+	button:not(.expand) { order: 2; }
 </style>
 
 <script>
