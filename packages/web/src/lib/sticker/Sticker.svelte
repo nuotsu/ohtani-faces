@@ -1,7 +1,7 @@
 <article class={random()} on:click={onClick}>
-	<Favorited id={sticker._id} />
 	<StickerFace {sticker} {emojis} />
 	<StickerEmojis {emojis} />
+	<Favorited id={sticker._id} />
 </article>
 
 <style>

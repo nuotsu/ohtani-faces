@@ -7,6 +7,7 @@
 <style>
 	heart {
 		position: absolute;
+		z-index: 1;
 		bottom: 0;
 		right: 0;
 		margin: 0.5ch;

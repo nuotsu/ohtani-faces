@@ -26,8 +26,7 @@
 	}
 
 	.screen {
-		backdrop-filter: blur(8px);
-		@apply bg-white bg-opacity-80;
+		@apply bg-white bg-opacity-90 backdrop-blur;
 	}
 }
 
