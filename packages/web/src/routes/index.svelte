@@ -2,7 +2,7 @@
 <EmojiList />
 <SelectedEmoji />
 <StickerList />
-<Footer />
+<!-- <Footer /> -->
 <Details />
 
 <script>
@@ -11,7 +11,7 @@
 	import SelectedEmoji from '~/lib/emoji/SelectedEmoji.svelte'
 	import StickerList from '~/lib/sticker/StickerList.svelte'
 	import Details from '~/lib/details/Details.svelte'
-	import Footer from '~/lib/Footer.svelte'
+	// import Footer from '~/lib/Footer.svelte'
 	import '../app.css'
 </script>
 
