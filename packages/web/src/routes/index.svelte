@@ -1,20 +1,9 @@
-<div>
-	<Header />
-	<EmojiList />
-	<SelectedEmoji />
-	<StickerList />
-	<Footer />
-</div>
-
+<Header />
+<EmojiList />
+<SelectedEmoji />
+<StickerList />
+<Footer />
 <Details />
-
-<style>
-	div {
-		display: grid;
-		gap: 0.8rem;
-		padding-block: 1rem;
-	}
-</style>
 
 <script>
 	import Header from '~/lib/Header.svelte'

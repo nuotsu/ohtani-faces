@@ -11,8 +11,15 @@
 		bottom: 0;
 		right: 0;
 		margin: 0.5ch;
+		animation: fav 0.2s ease-in-out forwards;
 
 		@apply text-red-300 drop-shadow;
+	}
+
+	@keyframes fav {
+		from {
+			transform: scale(0);
+		}
 	}
 </style>
 

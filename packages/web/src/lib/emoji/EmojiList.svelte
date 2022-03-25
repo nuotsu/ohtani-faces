@@ -17,8 +17,7 @@
 		gap: 0.3ch;
 		overflow-x: auto;
 		padding: 0.25rem;
-		margin-inline: auto;
-		width: 100%;
+		margin: 0 auto 1rem;
 
 		@apply max-w-screen-md text-xl md:rounded;
 	}
