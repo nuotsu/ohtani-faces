@@ -1,4 +1,4 @@
-<section>
+<section class="overflow-hidden">
 	<ul>
 		{#each filteredStickers as sticker (sticker._id)}
 			<li>

@@ -61,10 +61,10 @@
 		</section>
 
 	{:else}
-		<p>Coming soon...</p>
+		<p class="text-gray-400 text-center py-4">Coming soon...</p>
 	{/if}
 
-	<p class="text-xs text-right mt-2">
+	<p class="text-xs text-right">
 		Data from
 		<a class="link" href="https://appac.github.io/mlb-data-api-docs/" target="_blank" rel="noopener noreferrer">
 			MLB Data API
@@ -73,8 +73,8 @@
 </TabContent>
 
 <style>
-	section + section {
-		margin-top: 1rem;
+	h3 {
+		@apply text-gray-400 text-xs font-bold uppercase tracking-wider mb-1;
 	}
 </style>
 

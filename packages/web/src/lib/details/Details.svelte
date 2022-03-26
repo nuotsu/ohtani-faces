@@ -3,7 +3,7 @@
 {#if !!$selectedSticker}
 	{#key $selectedSticker._id}
 		<aside class="screen" transition:slide>
-			<h2 class="text-4xl anim-fadein">
+			<h2 class="flex gap-1 justify-center text-5xl anim-fadein">
 				{#each emojis as emoji}
 					<Emoji {emoji} />
 				{/each}
@@ -25,6 +25,7 @@
 		position: fixed;
 		left: 50%;
 		bottom: 0;
+		z-index: 10;
 		transform: translateX(-50%);
 		display: grid;
 		gap: 0.5rem;

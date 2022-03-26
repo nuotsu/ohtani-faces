@@ -6,11 +6,11 @@
 
 <style>
 	div {
-		@apply overflow-x-auto text-center <md:px-8;
+		@apply overflow-x-auto <md:px-8;
 	}
 
 	table {
-		@apply bg-white;
+		@apply bg-white text-center;
 	}
 
 	table :global(:is(th, td):nth-child(even)) {

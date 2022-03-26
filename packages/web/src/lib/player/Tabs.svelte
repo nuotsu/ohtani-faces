@@ -12,13 +12,13 @@
 
 <style>
 	div {
-		@apply relative z-[1] flex items-end gap-2 -mb-2 overflow-x-auto;
+		@apply relative z-[1] flex items-end gap-1 -mb-2 overflow-x-auto;
 	}
 
 	button {
 		position: relative;
 		white-space: nowrap;
-		padding: 0.25em 0.5em 0.5em;
+		padding: 0.25em 0.75em 0.5em;
 	}
 
 	.active {

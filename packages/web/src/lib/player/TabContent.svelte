@@ -1,11 +1,14 @@
 <article hidden={$active !== title.short}>
-	<h2 class="font-black text-lg mb-2">{title.full}</h2>
+	<h2 class="font-black text-lg">{title.full}</h2>
 
 	<slot></slot>
 </article>
 
 <style>
 	article {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 		animation: appear 0.2s ease-in-out forwards;
 	}
 

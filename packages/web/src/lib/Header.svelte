@@ -5,7 +5,7 @@
 
 <style>
 	h1 :global(strong) {
-		@apply text-rose-700;
+		@apply inline-block;
 	}
 </style>
 
@@ -14,5 +14,5 @@
 
 	let { site } = $page.stuff
 
-	let title = site.title.full.replace(/Shohei Ohtani/g, '<strong>Shohei Ohtani</strong>')
+	let title = site.title.full.replace(/Shohei Ohtani/g, '<strong class="text-gradient-rose">Shohei Ohtani</strong>')
 </script>
