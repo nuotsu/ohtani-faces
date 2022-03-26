@@ -1,7 +1,7 @@
 <TabContent {index}>
 	<dl>
 		<dt>Name</dt>
-		<dd>{player.name.en} / {player.name.jp}</dd>
+		<dd>{info.name_display_first_last} / {player.name.jp}</dd>
 
 		<dt>Jersey</dt>
 		<dd>#{info.jersey_number}</dd>
