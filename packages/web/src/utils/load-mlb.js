@@ -1,8 +1,7 @@
-const base_url = 'https://lookup-service-prod.mlb.com/json'
 const player_id = 660271
 
 function getPlayerInfo() {
-	const url = `${ base_url }/named.player_info.bam?sport_code='mlb'&player_id='${ player_id }'`
+	const url = `https://lookup-service-prod.mlb.com/json/named.player_info.bam?sport_code='mlb'&player_id='${ player_id }'`
 
 	return fetch(url)
 		.then(res => res.json())
@@ -10,8 +9,7 @@ function getPlayerInfo() {
 }
 
 function getStats(season, game_type, sport) {
-	// TODO: refactor into url params
-	const url = `${ base_url }/named.sport_${ sport }_tm.bam?league_list_id='mlb'&game_type='${ game_type }'&season='${ season }'&player_id='${ player_id }'`
+	const url = `https://lookup-service-prod.mlb.com/json/named.sport_${ sport }_tm.bam?league_list_id='mlb'&game_type='${ game_type }'&season='${ season }'&player_id='${ player_id }'`
 
 	return fetch(url)
 		.then(res => res.json())
