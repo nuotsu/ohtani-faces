@@ -4,6 +4,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 // documents
 import site from './documents/site'
 import sticker from './documents/sticker'
+import player from './documents/player'
 
 export default createSchema({
   name: 'default',
@@ -11,5 +12,6 @@ export default createSchema({
     // documents
     site,
     sticker,
+    player,
   ]),
 })

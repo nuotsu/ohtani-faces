@@ -14,6 +14,10 @@
 }
 
 @layer components {
+	.screen {
+		@apply bg-white bg-opacity-90 backdrop-blur;
+	}
+
 	.action {
 		display: inline-block;
 		padding: 0.25em 0.5em;
@@ -25,8 +29,8 @@
 			hover:from-rose-600 hover:to-rose-300;
 	}
 
-	.screen {
-		@apply bg-white bg-opacity-90 backdrop-blur;
+	.link {
+		@apply underline hover:decoration-2;
 	}
 }
 

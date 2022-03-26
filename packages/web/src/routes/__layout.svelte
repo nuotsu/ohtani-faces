@@ -18,33 +18,14 @@
 </script>
 
 <script context="module">
-	import client from '~/utils/sanity'
-	import runes from 'runes'
+	import loadSanity from '~/utils/load-sanity'
+	import loadMlb from '~/utils/load-mlb'
 
 	export async function load() {
-		const { site, stickers, emojis } = await client.fetch(`
-			{
-				'site': *[_type == 'site'][0],
-				'stickers': *[_type == 'sticker']|order(date desc) {
-					_id,
-					image {
-						face,
-						original,
-						'originalUrl': original.asset->url,
-						source
-					},
-					emojis,
-					date
-				},
-				'emojis': *[_type == 'sticker']|order(date desc).emojis
-			}
-		`)
-
 		return {
 			stuff: {
-				site,
-				stickers,
-				emojis: [...new Set(runes(emojis.join('')))]
+				...await loadSanity(),
+				...await loadMlb(),
 			}
 		}
 	}

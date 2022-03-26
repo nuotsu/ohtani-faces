@@ -1,10 +1,12 @@
-<ul>
-	{#each filteredStickers as sticker (sticker._id)}
-		<li>
-			<Sticker {sticker} />
-		</li>
-	{/each}
-</ul>
+<section>
+	<ul>
+		{#each filteredStickers as sticker (sticker._id)}
+			<li>
+				<Sticker {sticker} />
+			</li>
+		{/each}
+	</ul>
+</section>
 
 <style>
 	ul {

@@ -1,4 +1,4 @@
-<div class="screen no-scrollbar" class:expand class:flex-wrap={expand}>
+<section class="screen no-scrollbar" class:expand class:flex-wrap={expand}>
 	{#each emojis as emoji}
 		<Emoji {emoji} {expand} closeDetailsOnClick />
 	{/each}
@@ -6,10 +6,10 @@
 	<FilterFavorites {expand} />
 
 	<ExpandButton {expand} on:click={() => (expand = !expand)} />
-</div>
+</section>
 
 <style>
-	div {
+	section {
 		position: sticky;
 		top: 0;
 		z-index: 1;
