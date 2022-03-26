@@ -1,4 +1,4 @@
-const base_url = 'http://lookup-service-prod.mlb.com/json'
+const base_url = 'https://lookup-service-prod.mlb.com/json'
 const player_id = 660271
 
 function getPlayerInfo() {
