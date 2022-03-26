@@ -15,7 +15,7 @@
 		display: inline-flex;
 		padding: 0.25em;
 
-		@apply text-red-300;
+		@apply text-red-300 hover:text-red-500 transition-colors;
 	}
 </style>
 

@@ -1,11 +1,11 @@
-<Header/>
-<EmojiList/>
-<SelectedEmoji/>
-<StickerList/>
+<!-- <Header/> -->
+<!-- <EmojiList/> -->
+<!-- <SelectedEmoji/> -->
+<!-- <StickerList/> -->
 <PlayerInfo/>
-<Ad/>
-<Footer/>
-<Details/>
+<!-- <Ad/> -->
+<!-- <Footer/> -->
+<!-- <Details/> -->
 
 <script>
 	import Header from '~/lib/Header.svelte'

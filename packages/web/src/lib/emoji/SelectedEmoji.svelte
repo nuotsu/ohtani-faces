@@ -4,7 +4,7 @@
 		transition:fly={{ x: 20 }}
 	>
 		<span class="with-icon text-gray-400 text-xs">
-			<FilterIcon />
+			<FilterIcon height="1em" />
 			Filter:
 		</span>
 
