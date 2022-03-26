@@ -1,4 +1,4 @@
-<section class="overflow-hidden">
+<section>
 	<ul>
 		{#each filteredStickers as sticker (sticker._id)}
 			<li>
@@ -19,6 +19,16 @@
 		background-color: #fff;
 
 		@apply <sm:grid-cols-4;
+	}
+
+	ul:empty::after {
+		content: 'No faces... 🤭';
+		grid-column: 1 / -1;
+		padding: 2rem;
+		display: block;
+		text-align: center;
+
+		@apply text-gray-300;
 	}
 </style>
 

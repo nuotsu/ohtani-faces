@@ -16,7 +16,7 @@
 		display: flex;
 		gap: 0.3ch;
 		overflow-x: auto;
-		padding: 0.25rem;
+		padding: 0.5rem;
 		margin: 0 auto 1rem;
 
 		@apply max-w-screen-md text-xl md:rounded;

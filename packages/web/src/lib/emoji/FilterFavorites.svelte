@@ -27,7 +27,7 @@
 	}
 
 	.active {
-		@apply bg-red-300 text-white;
+		@apply bg-red-300 text-white mr-1;
 	}
 </style>
 

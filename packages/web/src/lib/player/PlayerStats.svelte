@@ -1,7 +1,7 @@
 <TabContent {index}>
 	{#if !!hitting && !!pitching}
 		<section>
-			<h3>Hitting</h3>
+			<h3>🏏 Hitting</h3>
 			<StyledTable>
 				<tr class="gradient-rose">
 					<th><abbr title="Games">G</abbr></th>
@@ -35,7 +35,7 @@
 		</section>
 
 		<section>
-			<h3>Pitching</h3>
+			<h3>⚾️ Pitching</h3>
 			<StyledTable>
 				<tr class="gradient-rose">
 					<th><abbr title="Games">G</abbr></th>
@@ -61,10 +61,12 @@
 		</section>
 
 	{:else}
-		<p class="text-gray-400 text-center py-4">Coming soon...</p>
+		<p class="text-gray-300 text-center py-8">
+			Coming soon... 🤓
+		</p>
 	{/if}
 
-	<p class="text-xs text-right">
+	<p class="text-gray-400 text-xs text-right">
 		Data from
 		<a class="link" href="https://appac.github.io/mlb-data-api-docs/" target="_blank" rel="noopener noreferrer">
 			MLB Data API

@@ -1,5 +1,5 @@
 <button
-	class:opacity-30={unselected}
+	class:opacity-30={!!$selectedEmoji && !selected}
 	class:order-2={!expand}
 	on:click={onClick}
 >
@@ -18,7 +18,6 @@
 	export let emoji, expand, closeDetailsOnClick = false
 
 	$: selected = $selectedEmoji === emoji
-	$: unselected = !!$selectedEmoji && !selected
 
 	function onClick() {
 		if (selected) {

@@ -34,8 +34,9 @@
 		padding: 0.5rem;
 		padding-bottom: calc(1rem + env(safe-area-inset-bottom));
 		border-bottom: none;
+		box-shadow: 0 -1rem 2rem hsla(0, 0%, 0%, 0.05);
 
-		@apply rounded-t shadow-lg;
+		@apply rounded-t-lg;
 	}
 
 	h2 {

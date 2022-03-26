@@ -9,6 +9,8 @@
 		place-content: center;
 		width: 1.2em;
 		height: 1.2em;
+
+		@apply text-xl rounded-full;
 	}
 
 	button:not(:hover) {

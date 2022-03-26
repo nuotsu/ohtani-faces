@@ -16,7 +16,7 @@
 		<dd>{info.age}</dd>
 	</dl>
 
-	<p class="text-xs text-right">
+	<p class="text-gray-400 text-xs text-right">
 		Data from
 		<a class="link" href="https://appac.github.io/mlb-data-api-docs/" target="_blank" rel="noopener noreferrer">
 			MLB Data API
@@ -25,7 +25,7 @@
 
 	<blockquote class="border-l-2 border-gray-100 pl-4 <md:text-sm">
 		<p>{content}</p>
-		<footer class="text-xs text-right">
+		<footer class="text-gray-400 text-xs text-right">
 			— from
 			<a class="link" href={source.url} target="_blank" rel="nopener noreferrer">
 				{source.name}
