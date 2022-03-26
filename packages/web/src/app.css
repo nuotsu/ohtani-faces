@@ -18,14 +18,17 @@
 		@apply bg-white bg-opacity-90 backdrop-blur;
 	}
 
+	.gradient-rose {
+		@apply bg-gradient-to-tr from-rose-700 to-rose-400 text-white;
+	}
+
 	.action {
 		display: inline-block;
 		padding: 0.25em 0.5em;
-		color: #fff;
 		text-align: center;
 
 		@apply
-			rounded shadow-md shadow-rose-200 bg-gradient-to-tr from-rose-700 to-rose-400
+			rounded shadow-md shadow-rose-200 gradient-rose
 			hover:from-rose-600 hover:to-rose-300;
 	}
 
@@ -35,10 +38,11 @@
 }
 
 @layer utilities {
+	.no-scrollbar { scrollbar-width: none; }
 	.no-scrollbar::-webkit-scrollbar { display: none; }
-	.no-scrollbar {
-		-ms-overflow-style: none;
-		scrollbar-width: none;
+
+	.full-width {
+		margin-inline: calc(50% - 50vw);
 	}
 
 	.with-icon {

@@ -1,4 +1,4 @@
-<section class="max-w-screen-md mx-auto my-4">
+<section class="max-w-screen-md mx-auto my-4 px-4">
 	<Tabs/>
 
 	<div class="p-4 bg-white rounded">
@@ -25,5 +25,5 @@
 		{ short: '2021 Season', full: '2021 Regular Season Stats' },
 	]
 
-	export const active = writable(tabs[3].short)
+	export const active = writable(tabs[0].short)
 </script>
