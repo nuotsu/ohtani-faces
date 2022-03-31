@@ -10,7 +10,7 @@
 	}
 
 	table {
-		@apply bg-white text-center;
+		@apply bg-white text-center rounded overflow-hidden;
 	}
 
 	table :global(:is(th, td):nth-child(even)) {

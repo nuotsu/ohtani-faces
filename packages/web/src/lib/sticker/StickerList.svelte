@@ -1,5 +1,5 @@
 <section>
-	<ul class="relative z-0 grid gap-[3px] p-[3px] bg-white <sm:grid-cols-4">
+	<ul class="relative z-0 grid gap-[3px] p-[3px] bg-white">
 		{#each filteredStickers as sticker (sticker._id)}
 			<li>
 				<Sticker {sticker} />

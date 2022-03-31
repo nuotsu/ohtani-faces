@@ -1,19 +1,25 @@
 <TabContent {index}>
 	<dl>
 		<dt>Name</dt>
-		<dd>{info.name_display_first_last} / {player.name.jp}</dd>
+		<dd>
+			<span>{info.name_display_first_last}</span> /
+			<span>{player.name.jp}</span>
+		</dd>
 
 		<dt>Jersey</dt>
 		<dd>#{info.jersey_number}</dd>
+
+		<dt>Date of Birth</dt>
+		<dd>
+			<span>{dateformat(info.birth_date, 'mmmm d, yyyy')}</span>
+			<span>({info.age} years)</span>
+		</dd>
 
 		<dt>Height</dt>
 		<dd>{info.height_feet}' {info.height_inches}</dd>
 
 		<dt>Weight</dt>
 		<dd>{info.weight} lbs</dd>
-
-		<dt>Age</dt>
-		<dd>{info.age}</dd>
 	</dl>
 
 	<p class="text-gray-400 text-xs text-right">
@@ -23,8 +29,8 @@
 		</a>
 	</p>
 
-	<blockquote class="border-l-2 border-gray-100 pl-4 <md:text-sm">
-		<p>{content}</p>
+	<blockquote class="<md:text-sm">
+		<p class="border-l-2 border-gray-100 pl-4">{content}</p>
 		<footer class="text-gray-400 text-xs text-right">
 			— from
 			<a class="link" href={source.url} target="_blank" rel="nopener noreferrer">
@@ -36,21 +42,24 @@
 
 <style>
 	dl {
-		display: grid;
 		grid-template-columns: auto 1fr;
-		gap: 0 1rem;
 
-		@apply max-w-max mx-auto;
+		@apply grid gap-x-4 max-w-max mx-auto;
 	}
 
 	dt {
-		@apply text-gray-400;
+		@apply text-gray-400 text-right;
+	}
+
+	span {
+		display: inline-block;
 	}
 </style>
 
 <script>
 	import { page } from '$app/stores'
 	import TabContent from './TabContent.svelte'
+	import dateformat from 'dateformat'
 
 	export let index
 
