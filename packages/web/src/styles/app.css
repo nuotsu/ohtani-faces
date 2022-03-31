@@ -1,10 +1,31 @@
+@import './fonts.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
 	body {
 		@apply bg-gray-100;
+	}
+
+	body > * {
+		position: relative;
+		z-index: 1;
+	}
+
+	body::after {
+		content: '';
+		position: fixed;
+		inset: -5rem 0;
+		background-image: radial-gradient(theme('colors.gray.200') 1px, transparent 1px);
+		background-size: 0.8rem 0.8rem;
+
+		@apply -skew-y-6;
 	}
 
 	svg {
@@ -13,6 +34,10 @@
 	}
 
 	[hidden] { display: none !important; }
+
+	:target {
+		scroll-margin-top: 4rem;
+	}
 }
 
 @layer components {

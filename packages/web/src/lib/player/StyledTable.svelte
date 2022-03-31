@@ -18,6 +18,6 @@
 	}
 
 	table :global(:is(th, td)) {
-		padding: 0 1em;
+		padding: 0.25em 1em;
 	}
 </style>

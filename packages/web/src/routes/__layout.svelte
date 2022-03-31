@@ -13,6 +13,7 @@
 <script>
 	import { page } from '$app/stores'
 	import { urlFor } from '~/utils/sanity'
+	import '../styles/app.css'
 
 	let { site } = $page.stuff
 </script>

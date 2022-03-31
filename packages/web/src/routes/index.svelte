@@ -16,5 +16,4 @@
 	import PlayerInfo from '~/lib/player/PlayerInfo.svelte'
 	import Footer from '~/lib/Footer.svelte'
 	import Details from '~/lib/details/Details.svelte'
-	import '../app.css'
 </script>
