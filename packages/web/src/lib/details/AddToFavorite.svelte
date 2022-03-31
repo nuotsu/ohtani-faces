@@ -12,7 +12,7 @@
 
 <style>
 	button {
-		@apply text-red-300 hover:text-red-500 transition-colors;
+		@apply text-red-300 hover:bg-white hover:text-red-500 transition-colors;
 	}
 </style>
 
