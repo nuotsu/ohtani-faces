@@ -1,4 +1,4 @@
-<article class={random()} on:click={onClick}>
+<article class={random()} on:click={() => $selectedSticker = sticker}>
 	<StickerFace {sticker} {emojis} />
 	<StickerEmojis {emojis} />
 	<Favorited id={sticker._id} />
@@ -50,8 +50,4 @@
 	export let sticker
 
 	let emojis = sticker.emojis
-
-	function onClick() {
-		$selectedSticker = sticker
-	}
 </script>

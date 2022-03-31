@@ -1,7 +1,7 @@
 <Action
-	image={!!$selectedSticker && $selectedSticker.image.original}
+	image={original}
 	{alt}
-	href={!!$selectedSticker && ($selectedSticker.image.source || $selectedSticker.image.originalUrl)}
+	href={source || originalUrl}
 	target="_blank"
 	className="rotate-2 rounded"
 >
@@ -14,10 +14,10 @@
 	import ExternalIcon from '~/lib/icon/External.svelte'
 	import { selectedSticker } from '~/utils/store'
 
-	let source = ($selectedSticker?.image.source) || ''
+	let { original, source, originalUrl } = $selectedSticker?.image
 
 	let alt =
-		source.includes('gettyimages') ? 'Copyright Getty Images' :
-		source.includes('instagram') ? 'Copyright Instagram' :
+		source?.includes('gettyimages') ? 'Copyright Getty Images' :
+		source?.includes('instagram') ? 'Copyright Instagram' :
 		''
 </script>

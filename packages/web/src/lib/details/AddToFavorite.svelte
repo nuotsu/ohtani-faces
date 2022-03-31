@@ -22,7 +22,7 @@
 	import { favorites, selectedSticker } from '~/utils/store'
 	import { browser } from '$app/env'
 
-	$: favorited = !!$selectedSticker && $favorites.includes($selectedSticker._id)
+	$: favorited = $favorites.includes($selectedSticker?._id)
 
 	function remove() {
 		if (browser) {

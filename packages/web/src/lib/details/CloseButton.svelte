@@ -1,4 +1,7 @@
-<button on:click={onClick} title="Close details">
+<button
+	on:click={() => $selectedSticker = false}
+	title="Close details"
+>
 	&times;
 </button>
 
@@ -17,8 +20,4 @@
 
 <script>
 	import { selectedSticker } from '~/utils/store'
-
-	function onClick() {
-		$selectedSticker = false
-	}
 </script>

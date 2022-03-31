@@ -3,7 +3,7 @@
 {#if !!$selectedSticker}
 	{#key $selectedSticker._id}
 		<aside class="screen" transition:slide>
-			<h2 class="flex gap-1 justify-center -mt-2 text-5xl text-center anim-fadein">
+			<h2 class="flex gap-1 justify-center -mt-4 text-5xl text-center anim-fadein">
 				{#each emojis as emoji}
 					<Emoji {emoji} />
 				{/each}
@@ -25,16 +25,13 @@
 
 <style>
 	aside {
-		display: grid;
-		gap: 0.5rem;
-		width: 450px;
-		max-width: 100%;
 		padding: 0.5rem;
 		padding-bottom: calc(1rem + env(safe-area-inset-bottom));
 		border-bottom: none;
 		box-shadow: 0 -1rem 2rem hsla(0, 0%, 0%, 0.05);
 
 		@apply
+			grid gap-2 w-[450px] max-w-full
 			fixed left-1/2 bottom-0 z-10 transform -translate-x-1/2
 			rounded-t-lg;
 	}

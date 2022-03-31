@@ -21,7 +21,9 @@
 			$favoritesFiltered = false
 			$selectedEmoji = emoji
 
-			if (closeDetailsOnClick) $selectedSticker = false
+			if (closeDetailsOnClick) {
+				$selectedSticker = false
+			}
 		}
 	}
 </script>

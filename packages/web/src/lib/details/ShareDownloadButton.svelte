@@ -21,13 +21,12 @@
 	import DownloadIcon from '~/lib/icon/Download.svelte'
 	import ShareIcon from '~/lib/icon/Share.svelte'
 
-	$: image = !!$selectedSticker && $selectedSticker.image.face
+	$: image = $selectedSticker?.image?.face
 
 	$: filename = !!$selectedSticker && `shohei-ohtani-${$selectedSticker.emojis}`
 
-	$: downloadUrl =
-		!!$selectedSticker &&
-		urlFor($selectedSticker.image.face).height(200).forceDownload(filename).url()
+	$: downloadUrl = !!$selectedSticker &&
+		urlFor(image).height(200).forceDownload(filename).url()
 
 	async function prepareShare(url) {
 		let response = await fetch(url)
