@@ -1,5 +1,7 @@
 <button
-	class="with-icon" class:order-1={!expand} class:active={$favoritesFiltered}
+	class="with-icon p-[0.25em] gap-[0.25ch] text-red-300 rounded transition-colors"
+	class:order-1={!expand}
+	class:active={$favoritesFiltered}
 	title="Favorites"
 	on:click={onClick}
 >
@@ -11,13 +13,6 @@
 </button>
 
 <style>
-	button {
-		padding: 0.25em;
-		gap: 0.25ch;
-
-		@apply text-red-300 rounded transition-colors;
-	}
-
 	button :global(svg) {
 		@apply transition-transform;
 	}

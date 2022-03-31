@@ -1,10 +1,10 @@
 {#if favorited}
-	<button class="with-icon" title="Remove from favorites" on:click={remove}>
+	<button class="action-2 with-icon" title="Remove from favorites" on:click={remove}>
 		<HeartSolid height="1em" />
-		<span class="text-sm">Favorite</span>
+		<span class="text-sm">Favorited</span>
 	</button>
 {:else}
-	<button class="with-icon" title="Add to favorites" on:click={add}>
+	<button class="action-2 with-icon" title="Add to favorites" on:click={add}>
 		<Heart height="1em" />
 		<span class="text-sm">Favorite</span>
 	</button>
@@ -12,9 +12,6 @@
 
 <style>
 	button {
-		display: inline-flex;
-		padding: 0.25em;
-
 		@apply text-red-300 hover:text-red-500 transition-colors;
 	}
 </style>

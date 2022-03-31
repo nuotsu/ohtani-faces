@@ -6,14 +6,7 @@
 
 <style>
 	article {
-		cursor: pointer;
-		position: relative;
-		display: grid;
-		place-content: center;
-		height: 100%;
-		padding: 0.5rem;
-
-		@apply transition-all;
+		@apply cursor-pointer relative grid place-content-center h-full p-2 transition-all;
 	}
 
 	.red { @apply bg-red-100; }
@@ -34,11 +27,11 @@
 	.rose { @apply bg-rose-100; }
 
 	article:hover {
-		z-index: 1;
 		box-shadow:
 			0 0 0 3px #fff,
 			0 2px 20px hsla(0, 0%, 0%, 0.15);
-		@apply scale-110 rounded;
+
+		@apply z-[1] scale-110 rounded;
 	}
 
 	article:hover :global(emojis) {

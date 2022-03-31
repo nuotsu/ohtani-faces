@@ -3,19 +3,13 @@
 	<p class="mt-2">{@html description}</p>
 </header>
 
-<style>
-	h1 :global(strong) {
-		@apply inline-block;
-	}
-</style>
-
 <script>
 	import { page } from '$app/stores'
 
 	let { site } = $page.stuff
 
 	let title = site.title.full
-		.replace(/Shohei Ohtani/g, '<strong class="text-gradient-rose">Shohei Ohtani</strong>')
+		.replace(/Shohei Ohtani/g, '<strong class="inline-block text-gradient-rose">Shohei Ohtani</strong>')
 
 	let description =  site.description
 		.replace(/Shohei Ohtani/g, '<a class="link" href="#info">Shohei Ohtani</a>')

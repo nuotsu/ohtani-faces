@@ -1,29 +1,16 @@
-<div class="action with-icon">
+<div class="action with-icon w-full">
 	<slot />
 </div>
 
 {#if !!image}
-	<figure class="anim-fadein">
-		<img {src} class="drop-shadow-md {className}" {alt} draggable="false" />
+	<figure class="select-none w-full px-4 transform transition-transform anim-fadein">
+		<img {src} class={className} {alt} draggable="false" />
 	</figure>
 {/if}
 
 <style>
-	.action {
-		width: 100%;
-	}
-
-	figure {
-		width: 100%;
-		padding-inline: 1rem;
-
-		@apply transform transition-transform;
-	}
-
 	img {
-		margin-inline: auto;
-		height: 80px;
-		object-fit: cover;
+		@apply mx-auto h-[80px] object-cover drop-shadow-md;
 	}
 </style>
 

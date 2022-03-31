@@ -14,8 +14,7 @@
 	}
 
 	body > * {
-		position: relative;
-		z-index: 1;
+		@apply relative z-[1];
 	}
 
 	body::after {
@@ -34,6 +33,11 @@
 	}
 
 	[hidden] { display: none !important; }
+
+	::selection {
+		/* @apply bg-rose-400/40; */
+		@apply bg-rose-700/80 text-white;
+	}
 
 	:target {
 		scroll-margin-top: 4rem;
@@ -56,14 +60,19 @@
 		@apply gradient-rose;
 	}
 
-	.action {
-		display: inline-block;
+	._btn {
 		padding: 0.25em 0.5em;
-		text-align: center;
+		@apply inline-block text-center rounded shadow-md;
+	}
 
+	.action {
 		@apply
-			rounded shadow-md shadow-rose-200 gradient-rose
+			_btn shadow-rose-200 gradient-rose
 			hover:from-rose-600 hover:to-rose-300;
+	}
+
+	.action-2 {
+		@apply _btn bg-white/60 shadow-gray-100/50;
 	}
 
 	.link {
@@ -80,10 +89,7 @@
 	}
 
 	.with-icon {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.5ch;
+		@apply inline-flex items-center justify-center gap-[0.5ch];
 	}
 
 	.anim-fadein {

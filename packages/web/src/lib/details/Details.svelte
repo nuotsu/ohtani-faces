@@ -3,30 +3,28 @@
 {#if !!$selectedSticker}
 	{#key $selectedSticker._id}
 		<aside class="screen" transition:slide>
-			<h2 class="flex gap-1 justify-center text-5xl anim-fadein">
+			<h2 class="flex gap-1 justify-center -mt-2 text-5xl text-center anim-fadein">
 				{#each emojis as emoji}
 					<Emoji {emoji} />
 				{/each}
 			</h2>
 
-			<ActionList/>
+			<div class="grid grid-cols-2 gap-1 items-end">
+				<ShareDownloadButton />
+				<SourceButton />
+			</div>
 
 			<div class="text-center">
 				<AddToFavorite/>
 			</div>
 
-			<CloseButton height="1em" />
+			<CloseButton />
 		</aside>
 	{/key}
 {/if}
 
 <style>
 	aside {
-		position: fixed;
-		left: 50%;
-		bottom: 0;
-		z-index: 10;
-		transform: translateX(-50%);
 		display: grid;
 		gap: 0.5rem;
 		width: 450px;
@@ -36,19 +34,17 @@
 		border-bottom: none;
 		box-shadow: 0 -1rem 2rem hsla(0, 0%, 0%, 0.05);
 
-		@apply rounded-t-lg;
-	}
-
-	h2 {
-		margin-top: -0.5em;
-		text-align: center;
+		@apply
+			fixed left-1/2 bottom-0 z-10 transform -translate-x-1/2
+			rounded-t-lg;
 	}
 </style>
 
 <script>
 	import { slide } from 'svelte/transition'
 	import Emoji from '~/lib/emoji/Emoji.svelte'
-	import ActionList from './ActionList.svelte'
+	import ShareDownloadButton from './ShareDownloadButton.svelte'
+	import SourceButton from './SourceButton.svelte'
 	import CloseButton from './CloseButton.svelte'
 	import AddToFavorite from './AddToFavorite.svelte'
 	import runes from 'runes'

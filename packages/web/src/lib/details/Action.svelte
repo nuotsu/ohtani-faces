@@ -14,9 +14,7 @@
 
 <style>
 	.root {
-		display: flex;
-		flex-direction: column-reverse;
-		gap: 0.25rem;
+		@apply flex flex-col-reverse gap-1;
 	}
 
 	.root:not(:hover) :global(figure) {

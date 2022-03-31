@@ -1,16 +1,13 @@
-<button on:click={onClick} title="Close details">×</button>
+<button on:click={onClick} title="Close details">
+	&times;
+</button>
 
 <style>
 	button {
-		position: absolute;
-		top: 0;
-		right: 0;
-		display: grid;
-		place-content: center;
 		width: 1.2em;
 		height: 1.2em;
 
-		@apply text-xl rounded-full;
+		@apply absolute top-0 right-0 grid place-content-center text-xl rounded-full;
 	}
 
 	button:not(:hover) {

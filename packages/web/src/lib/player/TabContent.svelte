@@ -6,10 +6,9 @@
 
 <style>
 	article {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
 		animation: appear 0.2s ease-in-out forwards;
+
+		@apply flex flex-col gap-4
 	}
 
 	@keyframes appear {

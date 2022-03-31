@@ -1,6 +1,7 @@
 <button
-	class="action text-base"
-	class:expand
+	class="action text-base sticky right-0"
+	class:w-full={expand}
+	class:order-2={!expand}
 	on:click
 >
 	{#if expand}
@@ -9,17 +10,6 @@
 		Expand
 	{/if}
 </button>
-
-<style>
-	button {
-		position: sticky;
-		right: 0;
-	}
-
-	.expand { width: 100%; }
-
-	button:not(.expand) { order: 2; }
-</style>
 
 <script>
 	export let expand

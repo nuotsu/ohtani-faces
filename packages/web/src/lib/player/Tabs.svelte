@@ -1,7 +1,7 @@
-<div class="no-scrollbar">
+<div class="relative z-[1] flex items-end gap-1 -mb-2 overflow-x-auto no-scrollbar">
 	{#each tabs as tab}
 		<button
-			class="bg-white rounded-t after:gradient-rose"
+			class="relative whitespace-nowrap bg-white rounded-t after:gradient-rose"
 			class:active={$active === tab.short}
 			on:click={() => onClick(tab.short)}
 		>
@@ -11,13 +11,7 @@
 </div>
 
 <style>
-	div {
-		@apply relative z-[1] flex items-end gap-1 -mb-2 overflow-x-auto;
-	}
-
 	button {
-		position: relative;
-		white-space: nowrap;
 		padding: 0.25em 0.75em 0.5em;
 	}
 
@@ -26,10 +20,7 @@
 	}
 
 	.active::after {
-		content: '';
-		display: block;
-		height: 2px;
-		transform-origin: left;
+		@apply content-[''] block h-[2px] origin-left;
 		animation: appear 0.2s ease-in-out forwards;
 	}
 

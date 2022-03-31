@@ -1,5 +1,5 @@
 <section>
-	<ul>
+	<ul class="relative z-0 grid gap-[3px] p-[3px] bg-white <sm:grid-cols-4">
 		{#each filteredStickers as sticker (sticker._id)}
 			<li>
 				<Sticker {sticker} />
@@ -10,25 +10,13 @@
 
 <style>
 	ul {
-		position: relative;
-		z-index: 0;
-		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-		gap: 3px;
-		padding: 3px;
-		background-color: #fff;
-
-		@apply <sm:grid-cols-4;
 	}
 
 	ul:empty::after {
 		content: 'No faces... 🤭';
-		grid-column: 1 / -1;
-		padding: 2rem;
-		display: block;
-		text-align: center;
 
-		@apply text-gray-300;
+		@apply col-span-full p-8 block text-center text-gray-300;
 	}
 </style>
 

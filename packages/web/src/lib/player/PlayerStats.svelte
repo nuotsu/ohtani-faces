@@ -76,7 +76,7 @@
 
 <style>
 	h3 {
-		@apply text-gray-400 text-xs font-bold uppercase tracking-wider mb-1;
+		@apply text-gray-400 text-xs uppercase tracking-wider mb-1;
 	}
 </style>
 

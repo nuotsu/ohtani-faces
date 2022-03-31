@@ -10,16 +10,10 @@
 
 <style>
 	section {
-		position: sticky;
-		top: 0;
-		z-index: 10;
-		display: flex;
-		gap: 0.3ch;
-		overflow-x: auto;
-		padding: 0.5rem;
-		margin: 0 auto 1rem;
-
-		@apply max-w-screen-md text-xl md:rounded;
+		@apply
+			sticky top-0 z-10 overflow-x-auto
+			flex gap-[0.3ch] max-w-screen-md p-2 mx-auto mb-4
+			text-xl md:rounded;
 	}
 
 	div:not(.expand)::after {

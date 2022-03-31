@@ -6,14 +6,9 @@
 
 <style>
 	heart {
-		position: absolute;
-		z-index: 1;
-		bottom: 0;
-		right: 0;
-		margin: 0.5ch;
 		animation: fav 0.2s ease-in-out forwards;
 
-		@apply text-red-300 drop-shadow;
+		@apply absolute z-[1] bottom-0 right-0 m-[0.5ch] text-red-300 drop-shadow;
 	}
 
 	@keyframes fav {

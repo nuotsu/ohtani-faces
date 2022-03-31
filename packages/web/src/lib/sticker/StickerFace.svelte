@@ -4,6 +4,7 @@
 
 <style>
 	figure {
+		user-select: none;
 		position: relative;
 		z-index: 1;
 		display: grid;
