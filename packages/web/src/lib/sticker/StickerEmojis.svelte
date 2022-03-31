@@ -1,8 +1,8 @@
-<div class="absolute left-0 bottom-0 flex m-1">
+<emojis class="absolute left-0 bottom-0 flex m-1">
 	{#each runes(emojis) as emoji}
 		<span>{emoji}</span>
 	{/each}
-</div>
+</emojis>
 
 <style>
 	span {
