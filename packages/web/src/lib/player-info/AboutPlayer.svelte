@@ -22,21 +22,11 @@
 		<dd>{info.weight} lbs</dd>
 	</dl>
 
-	<p class="text-gray-400 text-xs text-right">
-		Data from
-		<a class="link" href="https://appac.github.io/mlb-data-api-docs/" target="_blank" rel="noopener noreferrer">
-			MLB Data API
-		</a>
-	</p>
+	<Cite url="https://appac.github.io/mlb-data-api-docs/">MLB Data API</Cite>
 
 	<blockquote class="<md:text-sm">
 		<p class="border-l-2 border-gray-100 pl-4">{content}</p>
-		<footer class="text-gray-400 text-xs text-right">
-			— from
-			<a class="link" href={source.url} target="_blank" rel="nopener noreferrer">
-				{source.name}
-			</a>
-		</footer>
+		<Cite thing="Quote" url={source.url}>{source.name}</Cite>
 	</blockquote>
 </TabContent>
 
@@ -60,6 +50,7 @@
 	import { page } from '$app/stores'
 	import TabContent from './TabContent.svelte'
 	import dateformat from 'dateformat'
+	import Cite from '~/lib/Cite.svelte'
 
 	export let index
 

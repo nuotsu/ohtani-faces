@@ -66,12 +66,9 @@
 		</p>
 	{/if}
 
-	<p class="text-gray-400 text-xs text-right">
-		Data from
-		<a class="link" href="https://appac.github.io/mlb-data-api-docs/" target="_blank" rel="noopener noreferrer">
-			MLB Data API
-		</a>
-	</p>
+	<Cite url="https://appac.github.io/mlb-data-api-docs/">
+		MLB Data API
+	</Cite>
 </TabContent>
 
 <style>
@@ -84,6 +81,7 @@
 	import { page } from '$app/stores'
 	import TabContent from './TabContent.svelte'
 	import StyledTable from './StyledTable.svelte'
+	import Cite from '~/lib/Cite.svelte'
 
 	export let season, type, index
 

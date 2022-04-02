@@ -1,5 +1,5 @@
 <header class="max-w-screen-md mx-auto my-4 <md:mt-0 py-8 px-4 bg-white md:rounded text-center">
-	<h1 class="font-black text-2xl">{@html title}</h1>
+	<h1 class="font-bold text-2xl">{@html title}</h1>
 	<p class="mt-2">{@html description}</p>
 </header>
 

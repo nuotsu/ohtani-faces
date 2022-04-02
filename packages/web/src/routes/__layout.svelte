@@ -21,12 +21,14 @@
 <script context="module">
 	import loadSanity from '~/utils/load-sanity'
 	import loadMlb from '~/utils/load-mlb'
+	import loadNews from '~/utils/load-news'
 
 	export async function load() {
 		return {
 			stuff: {
 				...await loadSanity(),
 				...await loadMlb(),
+				...await loadNews(),
 			}
 		}
 	}

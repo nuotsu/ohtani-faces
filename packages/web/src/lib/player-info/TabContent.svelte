@@ -1,5 +1,5 @@
 <article hidden={$active !== title.short}>
-	<h2 class="font-black text-lg">{title.full}</h2>
+	<h2 class="font-bold text-lg">{title.full}</h2>
 
 	<slot></slot>
 </article>

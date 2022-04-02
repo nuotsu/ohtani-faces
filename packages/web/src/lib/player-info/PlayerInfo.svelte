@@ -1,4 +1,4 @@
-<section id="info" class="max-w-screen-md mx-auto my-8 px-4">
+<section id="info" class="max-w-screen-md mx-auto w-full">
 	<Tabs/>
 
 	<div class="p-4 bg-white rounded">
