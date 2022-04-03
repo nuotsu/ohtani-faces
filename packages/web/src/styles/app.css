@@ -78,6 +78,10 @@
 	.link {
 		@apply underline hover:decoration-2;
 	}
+
+	.subdued {
+		@apply text-gray-400 text-xs;
+	}
 }
 
 @layer utilities {

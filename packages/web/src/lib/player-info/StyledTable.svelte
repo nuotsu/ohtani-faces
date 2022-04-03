@@ -1,5 +1,5 @@
-<div class="no-scrollbar <md:full-width">
-	<table>
+<div class="pb-1 md:px-1 no-scrollbar <md:full-width">
+	<table class="bg-white text-center rounded overflow-hidden shadow">
 		<slot></slot>
 	</table>
 </div>
@@ -7,10 +7,6 @@
 <style>
 	div {
 		@apply overflow-x-auto <md:px-8;
-	}
-
-	table {
-		@apply bg-white text-center rounded overflow-hidden;
 	}
 
 	table :global(:is(th, td):nth-child(even)) {

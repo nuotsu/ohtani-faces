@@ -1,4 +1,4 @@
-<section class="screen no-scrollbar" class:expand class:flex-wrap={expand}>
+<section id="emojis" class="screen no-scrollbar" class:expand class:flex-wrap={expand}>
 	{#each emojis as emoji}
 		<Emoji {emoji} {expand} closeDetailsOnClick />
 	{/each}

@@ -1,36 +1,47 @@
 <a
-	class="group grid gap-4"
+	class="group grid gap-4 <md:gap-3"
 	href={url} target="_blank" rel="noopener noreferrer"
 >
 	<figure class="aspect-square sticky top-0">
 		<img
-			class="w-full h-full object-cover rounded"
-			src={urlToImage} alt={title}
-			loading="lazy"
-		>
+			class="w-full h-full object-cover rounded shadow-md"
+			src={thumbnail.contentUrl} alt={name}
+			width="100" height="100" loading="lazy"
+		/>
 	</figure>
 
-	<div class="self-center">
-		<p class="flex flex-wrap justify-between gap-x-4 group-hover:text-rose-300 text-gray-400 text-xs mb-1">
-			<time class="uppercase" datetime={publishedAt}>
-				{dateformat(publishedAt, 'mmm d, yyyy')}
-			</time>
+	<div class="self-center grid gap-1">
+		<time class="subdued uppercase" datetime={datePublished}>
+			{dateformat(datePublished, 'mmm d, yyyy')}
+		</time>
 
-			<span class="text-right">{source.name}</span>
-		</p>
+		<h3 class="group-hover:text-rose-700 leading-tight <md:text-sm">{name}</h3>
 
-		<h3 class="group-hover:text-rose-700 leading-tight <md:text-sm">{title}</h3>
+		<p class="subdued">{source.name}</p>
 	</div>
 </a>
 
 <style>
 	a {
-		grid-template-columns: 80px 1fr;
+		grid-template-columns: var(--img, 80px) 1fr;
+	}
+
+	@screen <md {
+		a { --img: 60px; }
+	}
+
+	.subdued {
+		@apply group-hover:text-rose-300;
 	}
 </style>
 
 <script>
 	import dateformat from 'dateformat'
 
-	export let title, publishedAt, source, url, urlToImage
+	export let name, url, image, provider, datePublished
+
+	let { thumbnail } = image
+	let [source] = provider
+
+	console.debug(image)
 </script>

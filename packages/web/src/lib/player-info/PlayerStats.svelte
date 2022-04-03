@@ -1,7 +1,7 @@
 <TabContent {index}>
 	{#if !!hitting && !!pitching}
 		<section>
-			<h3>🏏 Hitting</h3>
+			<h3 class="subdued">🏏 Hitting</h3>
 			<StyledTable>
 				<tr class="gradient-rose">
 					<th><abbr title="Games">G</abbr></th>
@@ -35,7 +35,7 @@
 		</section>
 
 		<section>
-			<h3>⚾️ Pitching</h3>
+			<h3 class="subdued">⚾️ Pitching</h3>
 			<StyledTable>
 				<tr class="gradient-rose">
 					<th><abbr title="Games">G</abbr></th>
@@ -73,7 +73,7 @@
 
 <style>
 	h3 {
-		@apply text-gray-400 text-xs uppercase tracking-wider mb-1;
+		@apply uppercase tracking-wider mb-1;
 	}
 </style>
 

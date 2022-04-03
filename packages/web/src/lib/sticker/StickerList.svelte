@@ -1,4 +1,4 @@
-<section>
+<section id="stickers">
 	<ul class="relative z-0 grid gap-[3px] p-[3px] bg-white">
 		{#each filteredStickers as sticker (sticker._id)}
 			<li>
@@ -10,7 +10,13 @@
 
 <style>
 	ul {
-		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(var(--size, 100px), 1fr));
+	}
+
+	@screen <sm {
+		ul {
+			--size: 75px;
+		}
 	}
 
 	ul:empty::after {
