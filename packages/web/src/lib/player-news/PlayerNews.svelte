@@ -3,11 +3,11 @@
 
 	<div class="relative">
 		<ul class="grid gap-4 overflow-y-auto pb-8">
-			{#each news as article}
+			<!-- {#each news as article}
 				<li>
 					<News {...article} />
 				</li>
-			{/each}
+			{/each} -->
 		</ul>
 	</div>
 
@@ -37,5 +37,7 @@
 	import Cite from '~/lib/Cite.svelte'
 	import News from './News.svelte'
 
-	let { news } = $page.stuff
+	// let { news } = $page.stuff
+
+	console.log($page.stuff)
 </script>

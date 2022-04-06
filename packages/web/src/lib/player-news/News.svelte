@@ -3,11 +3,15 @@
 	href={url} target="_blank" rel="noopener noreferrer"
 >
 	<figure class="aspect-square sticky top-0">
-		<img
-			class="w-full h-full object-cover rounded shadow-md"
-			src={thumbnail.contentUrl} alt={name}
-			width="100" height="100" loading="lazy"
-		/>
+		{#if !!thumbnail}
+			<img
+				class="w-full h-full object-cover rounded shadow-md"
+				src={thumbnail.contentUrl} alt={name}
+				width="100" height="100" loading="lazy"
+			/>
+		{:else}
+			<placeholder class="block w-full h-full bg-gray-100 rounded" />
+		{/if}
 	</figure>
 
 	<div class="self-center grid gap-1">
@@ -42,6 +46,4 @@
 
 	let { thumbnail } = image
 	let [source] = provider
-
-	console.debug(image)
 </script>

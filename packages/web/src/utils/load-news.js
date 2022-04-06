@@ -10,6 +10,7 @@ export default async function() {
 	})
 	.then(res => res.json())
 	.then(({ value }) => value)
+	.catch(console.error)
 
 	return {
 		news

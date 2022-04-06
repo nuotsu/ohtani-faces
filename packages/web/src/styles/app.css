@@ -21,10 +21,8 @@
 		content: '';
 		position: fixed;
 		inset: -5rem 0;
-		background-image: radial-gradient(theme('colors.gray.200') 1px, transparent 1px);
-		background-size: 0.8rem 0.8rem;
 
-		@apply -skew-y-6;
+		@apply dots -skew-y-6;
 	}
 
 	svg {
@@ -81,6 +79,11 @@
 
 	.subdued {
 		@apply text-gray-400 text-xs;
+	}
+
+	.dots {
+		background-image: radial-gradient(theme('colors.gray.200') 1px, transparent 1px);
+		background-size: 0.8rem 0.8rem;
 	}
 }
 
