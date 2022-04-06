@@ -16,7 +16,7 @@
 
 	<div class="self-center grid gap-1">
 		<time class="subdued uppercase" datetime={datePublished}>
-			{dateformat(datePublished, 'mmm d, yyyy')}
+			{dateformat(datePublished, 'mmm d, yyyy hTT')}
 		</time>
 
 		<h3 class="group-hover:text-rose-700 leading-tight <md:text-sm">{name}</h3>

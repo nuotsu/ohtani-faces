@@ -5,7 +5,7 @@
 
 <div class="max-w-screen-xl mx-auto lg:grid lg:grid-cols-2 gap-4 px-4 my-8">
 	<PlayerInfo/>
-	<!-- <PlayerNews/> -->
+	<PlayerNews/>
 </div>
 
 <Ad/>

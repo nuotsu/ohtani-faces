@@ -3,11 +3,11 @@
 
 	<div class="relative">
 		<ul class="grid gap-4 overflow-y-auto pb-8">
-			<!-- {#each news as article}
+			{#each news as article}
 				<li>
 					<News {...article} />
 				</li>
-			{/each} -->
+			{/each}
 		</ul>
 	</div>
 
@@ -37,7 +37,9 @@
 	import Cite from '~/lib/Cite.svelte'
 	import News from './News.svelte'
 
-	// let { news } = $page.stuff
-
-	console.log($page.stuff)
+	let news = $page.stuff.news?.sort((a, b) => {
+		let a_date = (new Date(a.datePublished)).getTime()
+		let b_date = (new Date(b.datePublished)).getTime()
+		return b_date - a_date
+	}) || []
 </script>
