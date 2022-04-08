@@ -1,14 +1,16 @@
-<section id="news" class="max-w-screen-md mx-auto grid gap-4 p-4 bg-white rounded">
+<section id="news" class="max-w-screen-md mx-auto w-full grid gap-4 p-4 bg-white rounded">
 	<h2 class="font-bold text-lg">Shohei Ohtani News</h2>
 
-	<div class="relative">
-		<ul class="grid gap-4 overflow-y-auto pb-8">
-			{#each news as article}
-				<li>
-					<News {...article} />
-				</li>
-			{/each}
-		</ul>
+	<div class="news relative">
+		{#if !!$page.stuff.news}
+			<ul class="grid gap-4 overflow-y-auto pb-8">
+				{#each news as article}
+					<li>
+						<News {...article} />
+					</li>
+				{/each}
+			</ul>
+		{/if}
 	</div>
 
 	<Cite url="https://www.microsoft.com/en-us/bing/apis/bing-news-search-api">Bing News</Cite>
@@ -21,7 +23,13 @@
 		@apply md:max-h-[300px];
 	}
 
-	div::after {
+	.news:empty::before {
+		content: 'News currently unavailable.';
+
+		@apply relative z-[1] block py-8 text-center text-gray-300;
+	}
+
+	.news::after {
 		content: '';
 		pointer-events: none;
 		position: absolute;
