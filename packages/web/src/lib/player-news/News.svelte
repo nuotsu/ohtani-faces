@@ -3,10 +3,10 @@
 	href={url} target="_blank" rel="noopener noreferrer"
 >
 	<figure class="aspect-square sticky top-0">
-		{#if !!thumbnail}
+		{#if !!image_url}
 			<img
 				class="w-full h-full object-cover rounded shadow-md"
-				src={thumbnail.contentUrl} alt={name}
+				src={image_url} alt={title}
 				width="100" height="100" loading="lazy"
 			/>
 		{:else}
@@ -15,13 +15,13 @@
 	</figure>
 
 	<div class="self-center grid gap-1">
-		<time class="subdued uppercase" datetime={datePublished}>
-			{dateformat(datePublished, 'mmm d, yyyy hTT')}
+		<time class="subdued uppercase" datetime={published_at}>
+			{dateformat(published_at, 'mmm d, yyyy hTT')}
 		</time>
 
-		<h3 class="group-hover:text-rose-700 leading-tight <md:text-sm">{name}</h3>
+		<h3 class="group-hover:text-rose-700 leading-tight <md:text-sm">{title}</h3>
 
-		<p class="subdued">{source.name}</p>
+		<p class="subdued">{source}</p>
 	</div>
 </a>
 
@@ -42,8 +42,8 @@
 <script>
 	import dateformat from 'dateformat'
 
-	export let name, url, image, provider, datePublished
+	export let title, description, url, image_url, published_at, source
 
-	let { thumbnail } = image
-	let [source] = provider
+	// let { thumbnail } = image
+	// let [source] = provider
 </script>

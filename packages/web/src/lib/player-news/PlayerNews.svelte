@@ -13,7 +13,7 @@
 		{/if}
 	</div>
 
-	<Cite url="https://www.microsoft.com/en-us/bing/apis/bing-news-search-api">Bing News</Cite>
+	<Cite url="https://www.thenewsapi.com">The News API</Cite>
 </section>
 
 <style>
