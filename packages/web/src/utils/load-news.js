@@ -8,7 +8,11 @@ function getTime(date) {
 	return new Date(date).getTime()
 }
 
+const dev = process.env.NODE_ENV === 'development'
+
 export default async function() {
+	if (dev) return null
+
 	const news = await fetch(url.toString())
 		.then(res => res.json())
 		.then(res => res.data.sort((a, b) => getTime(b.published_at) - getTime(a.published_at)))
