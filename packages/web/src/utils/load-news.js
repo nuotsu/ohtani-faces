@@ -15,7 +15,7 @@ export default async function() {
 
 	const news = await fetch(url.toString())
 		.then(res => res.json())
-		.then(res => res.data.sort((a, b) => getTime(b.published_at) - getTime(a.published_at)))
+		.then(res => res.data?.sort((a, b) => getTime(b.published_at) - getTime(a.published_at)))
 
 	return {
 		news
