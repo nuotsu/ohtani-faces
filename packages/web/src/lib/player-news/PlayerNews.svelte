@@ -2,7 +2,7 @@
 	<h2 class="font-bold text-lg">Shohei Ohtani News</h2>
 
 	<div class="news relative">
-		{#if !!$page.stuff.news}
+		{#if !!news}
 			<ul class="grid gap-4 overflow-y-auto pb-8">
 				{#each news as article}
 					<li>
@@ -45,9 +45,5 @@
 	import Cite from '~/lib/Cite.svelte'
 	import News from './News.svelte'
 
-	let news = $page.stuff.news?.sort((a, b) => {
-		let a_date = (new Date(a.datePublished)).getTime()
-		let b_date = (new Date(b.datePublished)).getTime()
-		return b_date - a_date
-	}) || []
+	let news = $page.stuff.news
 </script>
