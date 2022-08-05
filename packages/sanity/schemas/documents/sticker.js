@@ -11,12 +11,27 @@ export default {
 			type: 'object',
 			options: { collapsible: true, collapsed: false, columns: 2 },
 			fields: [
-				{ name: 'face', type: 'image' },
-				{ name: 'original', type: 'image' },
-				{ name: 'source', type: 'url' }
+				{
+					name: 'face',
+					type: 'image',
+					validation: Rule => Rule.required(),
+				},
+				{
+					name: 'original',
+					type: 'image',
+					validation: Rule => Rule.required(),
+				},
+				{
+					name: 'source',
+					type: 'url',
+				}
 			]
 		},
-		{ name: 'emojis', type: 'string' },
+		{
+			name: 'emojis',
+			type: 'string',
+			validation: Rule => Rule.required(),
+		},
 		{ name: 'date', type: 'date' }
 	],
 	preview: {
