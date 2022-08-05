@@ -1,1 +1,7 @@
-<h1>The Faces of Shohei Ohtani</h1>
+<EmojiList/>
+<StickerList/>
+
+<script>
+	import EmojiList from '$lib/emoji/EmojiList.svelte'
+	import StickerList from '$lib/sticker/StickerList.svelte'
+</script>

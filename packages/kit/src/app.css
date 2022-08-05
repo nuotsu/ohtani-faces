@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.sticker {
+		filter: drop-shadow(0 0.2em 0.1em #0006);
+	}
+}
