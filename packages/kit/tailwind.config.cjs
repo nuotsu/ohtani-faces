@@ -1,5 +1,6 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/**/*.{html,svelte}'],
+	content: ['./src/**/*.svelte'],
 	theme: {
 		extend: {
 			screens: {
@@ -9,10 +10,7 @@ module.exports = {
 				'<xl': { max: '1280px' },
 				'<2xl': { max: '1536px' }
 			},
-			fontFamily: {
-				sans: `'Poppins', sans-serif`,
-			},
-		}
+		},
 	},
-	plugins: []
+	plugins: [],
 }
