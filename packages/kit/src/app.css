@@ -12,6 +12,7 @@
 	}
 
 	.sticker {
+		width: auto;
 		filter: drop-shadow(0 0.2em 0.1em #0006);
 	}
 }
@@ -19,6 +20,10 @@
 @layer utilities {
 	.no-scrollbar { scrollbar-width: none; }
 	.no-scrollbar::-webkit-scrollbar { display: none; }
+
+	.glass {
+		@apply bg-white/90 backdrop-blur-sm;
+	}
 
 	.dots {
 		background-image: radial-gradient(theme('colors.gray.200') 1px, transparent 1px);

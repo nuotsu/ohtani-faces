@@ -3,6 +3,9 @@ module.exports = {
 	content: ['./src/**/*.svelte'],
 	theme: {
 		extend: {
+			colors: {
+
+			},
 			screens: {
 				'<xs': { max: '428px' },
 				'<sm': { max: '640px' },
