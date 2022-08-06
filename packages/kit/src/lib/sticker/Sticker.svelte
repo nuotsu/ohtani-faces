@@ -1,8 +1,9 @@
 <Img
+	class="sticker {className}"
 	image={sticker.image.face}
 	alt={sticker.emojis}
 	builder={b => b.size(width, height)}
-	className="sticker {className}"
+	draggable={false}
 />
 
 <script>

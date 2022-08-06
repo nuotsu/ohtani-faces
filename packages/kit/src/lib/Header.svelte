@@ -1,4 +1,4 @@
-<header>
+<header class="text-center">
 	{site.title.full}
 </header>
 

@@ -3,7 +3,25 @@
 @tailwind utilities;
 
 @layer components {
+	._btn {
+		padding: 0.25em 0.5em;
+	}
+
+	.action {
+		@apply _btn bg-black text-white;
+	}
+
 	.sticker {
 		filter: drop-shadow(0 0.2em 0.1em #0006);
+	}
+}
+
+@layer utilities {
+	.no-scrollbar { scrollbar-width: none; }
+	.no-scrollbar::-webkit-scrollbar { display: none; }
+
+	.dots {
+		background-image: radial-gradient(theme('colors.gray.200') 1px, transparent 1px);
+		background-size: 0.8rem 0.8rem;
 	}
 }
