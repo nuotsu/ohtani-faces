@@ -17,8 +17,12 @@
 		padding: 0.25em 0.5em;
 	}
 
-	.action {
+	.button {
 		@apply _btn bg-black text-white;
+	}
+
+	.action {
+		@apply _btn bg-gradient-to-br from-red-800 to-red-400 text-white;
 	}
 
 	.sticker {
@@ -34,9 +38,9 @@
 	.scroll-snap { scroll-snap-type: x mandatory; }
 	.scroll-snap > * { scroll-snap-align: center; }
 
-	.glass {
-		@apply bg-white/90 backdrop-blur-sm;
-	}
+	.glass { @apply bg-white/90 backdrop-blur-sm; }
+	.glass-dark { @apply bg-white/10 backdrop-blur-sm; }
+	.glass-border { @apply border border-white/10; }
 
 	.dots {
 		background-image: radial-gradient(theme('colors.gray.200') 1px, transparent 1px);

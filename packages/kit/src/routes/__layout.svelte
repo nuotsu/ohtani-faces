@@ -5,7 +5,7 @@
 		<Recent/>
 	</div>
 
-	<div class="flex flex-col bg-white text-black overflow-auto" style:grid-area="two">
+	<div class="flex flex-col bg-white text-black overflow-auto md:rounded-l-lg <md:rounded-t-lg" style:grid-area="two">
 		<slot></slot>
 	</div>
 </div>

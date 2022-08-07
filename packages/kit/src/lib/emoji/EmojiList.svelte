@@ -10,7 +10,7 @@
 			<Emoji {emoji} unselectSticker />
 		{/each}
 
-		<button class="action sticky right-0 text-base" on:click={() => expanded = !expanded}>
+		<button class="button sticky right-0 text-base" on:click={() => expanded = !expanded}>
 			{expanded ? 'Collapse' : 'Expand'}
 		</button>
 	</nav>

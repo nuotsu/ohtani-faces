@@ -3,7 +3,7 @@
 
 	<ul class="grid gap-4 p-4 min-w-0 <md:flex overflow-x-auto scroll-snap">
 		{#each latest as sticker}
-			<li class="grid gap-4 items-center px-4 rounded-lg bg-white/10 border border-white/10 backdrop-blur-sm">
+			<li class="grid gap-4 items-center px-4 rounded-lg glass-dark glass-border">
 				<button class="-mt-4" on:click={() => $selected_sticker = sticker}>
 					<Sticker className="m-auto" {sticker} height={120} />
 				</button>

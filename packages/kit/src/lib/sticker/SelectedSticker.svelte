@@ -15,13 +15,17 @@
 					height={320}
 				/>
 
-				<p class="text-3xl">
+				<p class="absolute left-0 top-0 flex flex-col text-3xl rounded-lg p-2 glass-dark glass-border">
 					{#each runes(sticker.emojis) as emoji}
 						<Emoji {emoji} />
 					{/each}
 				</p>
 
 				<p><time datetime={sticker.date}>{sticker.date}</time></p>
+
+				<p>
+					<Share {sticker} />
+				</p>
 			</div>
 		</section>
 	{/key}
@@ -31,6 +35,7 @@
 	import { selected_sticker } from '@/utils/store'
 	import Sticker from './Sticker.svelte'
 	import Emoji from '../emoji/Emoji.svelte'
+	import Share from './Share.svelte'
 	import runes from 'runes'
 
 	$: sticker = $selected_sticker
