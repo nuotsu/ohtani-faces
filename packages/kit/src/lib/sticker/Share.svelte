@@ -1,4 +1,4 @@
-{#if navigator.canShare}
+{#if 'share' in navigator}
 	{#await prepareShare()}
 		<span class="action" href>
 			Loading...
@@ -9,7 +9,7 @@
 		</button>
 	{/await}
 {:else}
-	<a class="action" href={download}>
+	<a class="action" href={download} target="_blank">
 		Download
 	</a>
 {/if}
