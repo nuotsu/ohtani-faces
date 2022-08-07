@@ -19,10 +19,11 @@
 @layer components {
 	._btn {
 		padding: 0.25em 0.5em;
+		border: 1px solid transparent;
 	}
 
 	.button {
-		@apply _btn bg-black text-white;
+		@apply _btn bg-black text-white border-white/20;
 	}
 
 	.action {

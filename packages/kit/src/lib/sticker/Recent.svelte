@@ -10,7 +10,7 @@
 
 				<div>
 					<p class="text-xl">{sticker.emojis}</p>
-					<p><time datetime={sticker.date}>{sticker.date}</time></p>
+					<p><time datetime={sticker.date}>{date(sticker.date)}</time></p>
 				</div>
 			</li>
 		{/each}
@@ -24,6 +24,7 @@
 
 	li {
 		grid-template-columns: 60px 1fr;
+		min-width: max-content;
 	}
 </style>
 
@@ -31,6 +32,7 @@
 	import { page } from '$app/stores'
 	import Sticker from './Sticker.svelte'
 	import { selected_sticker } from '@/utils/store'
+	import date from '@/utils/date'
 
 	const { stickers } = $page.stuff
 

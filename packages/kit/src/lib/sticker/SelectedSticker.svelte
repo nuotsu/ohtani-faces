@@ -21,10 +21,11 @@
 					{/each}
 				</p>
 
-				<p><time datetime={sticker.date}>{sticker.date}</time></p>
+				<p><time datetime={sticker.date}>{date(sticker.date)}</time></p>
 
 				<p>
 					<Share {sticker} />
+					<Source {sticker} />
 				</p>
 			</div>
 		</section>
@@ -36,6 +37,8 @@
 	import Sticker from './Sticker.svelte'
 	import Emoji from '../emoji/Emoji.svelte'
 	import Share from './Share.svelte'
+	import Source from './Source.svelte'
+	import date from '@/utils/date'
 	import runes from 'runes'
 
 	$: sticker = $selected_sticker
