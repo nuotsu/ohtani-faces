@@ -31,6 +31,9 @@
 	.no-scrollbar { scrollbar-width: none; }
 	.no-scrollbar::-webkit-scrollbar { display: none; }
 
+	.scroll-snap { scroll-snap-type: x mandatory; }
+	.scroll-snap > * { scroll-snap-align: center; }
+
 	.glass {
 		@apply bg-white/90 backdrop-blur-sm;
 	}
@@ -38,5 +41,24 @@
 	.dots {
 		background-image: radial-gradient(theme('colors.gray.200') 1px, transparent 1px);
 		background-size: 0.8rem 0.8rem;
+	}
+
+	.anim-fade {
+		opacity: 0;
+		animation: fade 0.2s ease-in-out calc(var(--delay, 0) * 0.005s) forwards;
+	}
+	.anim-fade-r { animation: fade-r 0.2s ease-in-out forwards; }
+
+	@keyframes fade {
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fade-r {
+		from {
+			opacity: 0;
+			translate: -1rem 0;
+		}
 	}
 }
