@@ -4,4 +4,4 @@ const { format } = new Intl.DateTimeFormat('en-US', {
 	year: 'numeric',
 })
 
-export default date => format(new Date(date.split('-')))
+export default date => format(new Date(date + 'T00:00:00.000'))
