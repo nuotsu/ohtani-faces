@@ -1,6 +1,6 @@
 <section class="sticky top-0 z-[2] glass">
 	<header class="flex gap-4 items-end p-4 pb-0">
-		<h2>Emojis</h2>
+		<h2 class="h2">Emojis</h2>
 
 		<SelectedEmoji/>
 	</header>

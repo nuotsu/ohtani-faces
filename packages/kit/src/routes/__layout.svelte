@@ -1,11 +1,11 @@
 <div class="root grid">
-	<div class="flex flex-col max-h-screen overflow-hidden" style:grid-area="one">
+	<div class="one flex flex-col max-h-screen <md:w-screen md:overflow-hidden">
 		<Header/>
 		<SelectedSticker/>
 		<Recent/>
 	</div>
 
-	<div class="flex flex-col bg-white text-black overflow-auto md:rounded-l-lg <md:rounded-t-lg" style:grid-area="two">
+	<div class="two flex flex-col bg-white text-black <md:w-screen md:overflow-auto md:rounded-l-lg <md:rounded-t-lg">
 		<slot></slot>
 	</div>
 </div>
@@ -13,18 +13,13 @@
 <style>
 	@screen md {
 		.root {
-			display: grid;
 			grid-template-areas: 'one two';
 			grid-template-columns: 350px 1fr;
 			height: 100vh;
 		}
-	}
 
-	@screen <md {
-		.root {
-			grid-template-areas: 'one' 'two';
-			grid-template-rows: auto 1fr;
-		}
+		.one { grid-area: one; }
+		.two { grid-area: two; }
 	}
 </style>
 

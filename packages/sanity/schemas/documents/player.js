@@ -2,7 +2,7 @@ export default {
 	name: 'player',
 	title: 'Player',
 	type: 'document',
-	__experimental_actions: ['update', 'publish'],
+	// __experimental_actions: ['update', 'publish'],
 	fields: [
 		{
 			name: 'name',

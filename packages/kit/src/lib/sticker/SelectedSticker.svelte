@@ -1,7 +1,7 @@
 {#if !!sticker}
 	{#key sticker._id}
 		<section class="relative p-4 text-center border-t border-white/20 <sm:order-1">
-			<div class="anim-fade-r">
+			<div class="grid gap-2 anim-fade-r">
 				<button
 					class="absolute top-0 right-0 z-[1]"
 					on:click={() => $selected_sticker = null}
@@ -23,7 +23,7 @@
 
 				<p><time datetime={sticker.date}>{date(sticker.date)}</time></p>
 
-				<p>
+				<p class="grid grid-cols-2 gap-2">
 					<Share {sticker} />
 					<Source {sticker} />
 				</p>

@@ -1,5 +1,5 @@
 <section class="h-full overflow-y-auto border-t border-white/20 pt-4 <sm:-order-1">
-	<h2 class="sticky top-0 px-4">Recent additions</h2>
+	<h2 class="h1 sticky top-0 px-4">Recent additions</h2>
 
 	<ul class="grid gap-4 p-4 min-w-0 <md:flex overflow-x-auto scroll-snap">
 		{#each latest as sticker}

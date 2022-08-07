@@ -1,5 +1,5 @@
 <section class="grow relative z-[1] flex flex-col bg-white">
-	<h2 class="p-4">Stickers</h2>
+	<h2 class="h2 p-4">Stickers</h2>
 
 	<div class="grow dots">
 		<div
