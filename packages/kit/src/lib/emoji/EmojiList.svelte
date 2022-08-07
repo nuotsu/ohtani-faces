@@ -1,43 +1,22 @@
-<nav
-	class="max-w-screen-md mx-auto gap-x-2 p-2 glass text-xl no-scrollbar"
-	class:expanded
->
-	{#each emojis as emoji}
-		<Emoji {emoji} unselectSticker />
-	{/each}
-
-	<button
-		class="expander action py-0 text-sm"
-		on:click={() => expanded = !expanded}
-	>
-		{expanded ? 'Collapse' : 'Expand'}
-	</button>
-</nav>
+<section class="sticky top-0 z-[1] p-4 glass">
+	<h2>Emojis</h2>
+	<nav class="grid gap-1 text-2xl">
+		{#each shuffle(emojis) as emoji}
+			<Emoji {emoji} />
+		{/each}
+	</nav>
+</section>
 
 <style>
-	nav {
-		position: sticky;
-		top: 0;
-		z-index: 1;
-		display: flex;
-		overflow-x: auto;
-	}
-
-	nav.expanded {
-		flex-wrap: wrap;
-	}
-
-	nav:not(.expanded) .expander {
-		position: sticky;
-		right: 0;
+	.grid {
+		grid-template-columns: repeat(auto-fill, minmax(1em, 1fr));
 	}
 </style>
 
 <script>
 	import { page } from '$app/stores'
 	import Emoji from './Emoji.svelte'
+	import shuffle from '@/utils/shuffle'
 
 	const { emojis } = $page.stuff
-
-	let expanded = false
 </script>

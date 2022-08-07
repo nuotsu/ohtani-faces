@@ -1,46 +1,36 @@
-<section class="max-w-screen-2xl mx-auto dots">
-	<ul class:selected={!!$selected_emoji}>
+<section>
+	<h2 class="p-4">Stickers</h2>
+
+	<div class="grid <xs:!grid-cols-4 gap-2 p-4 dots" class:selected={!!$selected_emoji}>
 		{#each filtered as sticker (sticker._id)}
-			<button class="my-auto" on:click={() => $selected_sticker = sticker}>
-				<Sticker {sticker} height={200} />
+			<button class="my-auto" class:mx-auto={!$selected_emoji}>
+				<Sticker className="w-[80px]" {sticker} width={160} />
 			</button>
 		{/each}
-	</ul>
+	</div>
 </section>
 
 <style>
-	ul {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-		gap: 1rem;
-		padding: 1rem;
+	.grid {
+		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 	}
 
 	.selected {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
-	}
-
-	.selected button {
-		margin: initial;
-		max-width: 80px;
-	}
-
-	@screen <xs {
-		ul {
-			grid-template-columns: repeat(4, 1fr);
-		}
 	}
 </style>
 
 <script>
 	import { page } from '$app/stores'
 	import Sticker from './Sticker.svelte'
-	import { selected_emoji, selected_sticker } from '@/utils/store'
-	import runes from 'runes'
+	import shuffle from '@/utils/shuffle'
+	import { selected_emoji } from '@/utils/store'
 
 	const { stickers } = $page.stuff
 
-	$: filtered = stickers
-		.filter(({ emojis }) => !$selected_emoji || runes(emojis).includes($selected_emoji))
+	$: filtered = !!$selected_emoji
+		? stickers.filter(({ emojis }) => emojis.includes($selected_emoji))
+		: shuffle(stickers)
 </script>

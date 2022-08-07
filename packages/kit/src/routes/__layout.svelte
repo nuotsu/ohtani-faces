@@ -1,8 +1,29 @@
-<Header/>
+<div class="grid">
+	<div class="p-4" style:grid-area="one">
+		<Header/>
+	</div>
 
-<main>
-	<slot></slot>
-</main>
+	<div class="bg-white text-black overflow-auto" style:grid-area="two">
+		<slot></slot>
+	</div>
+</div>
+
+<style>
+	@screen md {
+		.grid {
+			grid-template-areas: 'one two';
+			grid-template-columns: 300px 1fr;
+			height: 100vh;
+		}
+	}
+
+	@screen <md {
+		.grid {
+			grid-template-areas: 'one' 'two';
+			grid-template-rows: auto 1fr;
+		}
+	}
+</style>
 
 <script>
 	import Header from '$lib/Header.svelte'
