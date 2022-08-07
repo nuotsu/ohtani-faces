@@ -1,4 +1,4 @@
-<aside class="sticky bottom-0 px-4">
+<aside class="sticky bottom-0 z-[1] px-4">
 	<div class="max-w-max ml-auto px-2 glass rounded-t-lg">
 		<StickerSize/>
 	</div>

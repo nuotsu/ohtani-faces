@@ -1,4 +1,4 @@
-<section class="grow flex flex-col">
+<section class="grow relative z-[1] flex flex-col bg-white">
 	<h2 class="p-4">Stickers</h2>
 
 	<div class="grow dots">
@@ -9,7 +9,7 @@
 		>
 			{#each filtered as sticker, i (sticker._id + i)}
 				<button
-					class="anim-fade"
+					class="my-auto anim-fade"
 					class:mx-auto={!$selected_emoji}
 					style:--delay={i}
 					on:click={() => $selected_sticker = sticker}

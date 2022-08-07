@@ -9,7 +9,7 @@
 				</button>
 
 				<div>
-					<p>{sticker.emojis}</p>
+					<p class="text-xl">{sticker.emojis}</p>
 					<p><time datetime={sticker.date}>{sticker.date}</time></p>
 				</div>
 			</li>

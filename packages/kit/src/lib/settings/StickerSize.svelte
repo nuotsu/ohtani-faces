@@ -10,6 +10,13 @@
 	+
 </label>
 
+<style>
+	input {
+		cursor: pointer;
+		width: 8em;
+	}
+</style>
+
 <script>
 	function onChange({ target }) {
 		localStorage.setItem('sticker_size', target.value)

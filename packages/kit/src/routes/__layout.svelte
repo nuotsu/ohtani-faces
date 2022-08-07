@@ -13,6 +13,7 @@
 <style>
 	@screen md {
 		.root {
+			display: grid;
 			grid-template-areas: 'one two';
 			grid-template-columns: 350px 1fr;
 			height: 100vh;
