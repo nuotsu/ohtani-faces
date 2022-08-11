@@ -70,7 +70,6 @@
 	import Sticker from './Sticker.svelte'
 	import { selected_emoji, selected_sticker } from '@/utils/store'
 	import { sticker_size } from '$lib/settings/StickerSize.svelte'
-	import shuffle from '@/utils/shuffle'
 
 	const { stickers } = $page.stuff
 
@@ -78,7 +77,5 @@
 		? stickers.filter(({ emojis }) => emojis.includes($selected_emoji))
 		: stickers
 
-	function random() {
-		return Math.floor(Math.random() * filtered.length)
-	}
+	const random = () => Math.floor(Math.random() * filtered.length)
 </script>
