@@ -23,17 +23,28 @@
 
 <style>
 	.grid {
-		grid-template-columns: repeat(auto-fill, minmax(var(--size, 100px), 1fr));
+		--size: 100px;
+		grid-template-columns: repeat(auto-fill, minmax(var(--size), 1fr));
 	}
 
 	.selected {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+
+		@apply <sm:justify-evenly;
 	}
 
-	.selected button {
-		max-width: var(--size, 100px);
+	@screen sm {
+		.selected button {
+			max-width: var(--size);
+		}
+	}
+
+	@screen <sm {
+		.selected button {
+			max-width: max(100px, calc(100% / 3 - 1rem));
+		}
 	}
 
 	button:hover :global(.sticker) {
