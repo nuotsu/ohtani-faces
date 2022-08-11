@@ -7,16 +7,18 @@
 			class:selected={!!$selected_emoji}
 			style:--size="{$sticker_size}px"
 		>
-			{#each filtered as sticker, i (sticker._id + i)}
-				<button
-					class="my-auto anim-fade"
-					class:mx-auto={!$selected_emoji}
-					style:--delay={i}
-					on:click={() => $selected_sticker = sticker}
-				>
-					<Sticker {sticker} width={300} />
-				</button>
-			{/each}
+			{#key filtered}
+				{#each filtered as sticker, i (sticker._id + i)}
+					<button
+						class="my-auto anim-fade"
+						class:mx-auto={!$selected_emoji}
+						style:--delay={i}
+						on:click={() => $selected_sticker = sticker}
+					>
+						<Sticker {sticker} width={300} />
+					</button>
+				{/each}
+			{/key}
 		</div>
 	</div>
 </section>
