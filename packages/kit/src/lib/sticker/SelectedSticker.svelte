@@ -14,7 +14,7 @@
 
 				<div class="relative">
 					<Sticker
-						className="mx-auto h-auto max-h-[250px] text-[0]"
+						className="mx-auto h-auto max-h-[250px]"
 						{sticker}
 						height={500}
 					/>
