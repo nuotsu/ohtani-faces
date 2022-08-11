@@ -1,16 +1,16 @@
 <section class="sticky top-0 z-[2] glass">
-	<header class="flex gap-4 items-end p-4 pb-0">
+	<header class="flex gap-4 items-center p-4 pb-0">
 		<h2 class="h2">Emojis</h2>
 
 		<SelectedEmoji/>
 	</header>
 
-	<nav class="gap-1 text-2xl p-4 overflow-x-auto no-scrollbar" class:expanded>
+	<nav class="gap-1 text-2xl p-4 pt-0 overflow-x-auto no-scrollbar" class:expanded>
 		{#each shuffle(emojis) as emoji}
 			<Emoji {emoji} unselectSticker />
 		{/each}
 
-		<button class="button sticky right-0 text-base" on:click={() => expanded = !expanded}>
+		<button class="action sticky right-0 text-base" on:click={() => expanded = !expanded}>
 			{expanded ? 'Collapse' : 'Expand'}
 		</button>
 	</nav>
@@ -29,6 +29,8 @@
 
 	button {
 		grid-column: span 3;
+
+		@apply <md:col-span-full;
 	}
 
 	nav:not(.expanded) button {

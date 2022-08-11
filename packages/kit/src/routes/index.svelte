@@ -1,7 +1,7 @@
 <EmojiList/>
 <StickerList/>
-<Footer/>
 <Settings/>
+<Footer/>
 
 <script>
 	import EmojiList from '$lib/emoji/EmojiList.svelte'

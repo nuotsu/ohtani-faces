@@ -1,7 +1,7 @@
 {#if !!$selected_emoji}
 	{#key $selected_emoji}
 		<button
-			class="group anim-fade-r"
+			class="group anim-fade-r px-2 rounded-full bg-ink/5"
 			on:click={() => $selected_emoji = null}
 		>
 			<span class="inline-block transition-transform group-hover:scale-125">&times;</span>

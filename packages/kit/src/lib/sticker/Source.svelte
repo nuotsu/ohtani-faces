@@ -1,4 +1,4 @@
-<a class="button" href={source || orig} target="_blank">
+<a class="action-2" href={source || orig} target="_blank">
 	Source
 </a>
 

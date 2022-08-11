@@ -1,3 +1,5 @@
+@import './fonts.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,11 +7,10 @@
 @layer base {
 	html {
 		scroll-behavior: smooth;
-		overflow: hidden;
 	}
 
 	body {
-		@apply bg-black text-white;
+		@apply bg-ink text-white accent-accent;
 	}
 
 	label {
@@ -18,23 +19,21 @@
 }
 
 @layer components {
-	.h1 { @apply font-bold; }
-	.h2 { @apply font-bold; }
+	._h { @apply font-bold; }
+	.h1 { @apply _h text-2xl; }
+	.h2 { @apply _h text-lg; }
 
 	._btn {
 		cursor: pointer;
-		padding: 0.25em 0.5em;
-		border: 1px solid transparent;
-		@apply hover:underline;
+		padding: 0.3em 0.5em;
+		border-radius: 3px;
+		@apply transition-colors glass;
 	}
 
-	.button {
-		@apply _btn bg-black text-white border-white/20;
-	}
+	.button { @apply _btn glass-border-dark hover:bg-white; }
 
-	.action {
-		@apply _btn bg-gradient-to-br from-red-800 to-red-400 text-white;
-	}
+	.action { @apply _btn bg-accent glass-border-dark bg-opacity-80 hover:bg-opacity-100 text-white; }
+	.action-2 { @apply _btn bg-white glass-border bg-opacity-10 hover:bg-opacity-20 text-white; }
 
 	.sticker {
 		width: auto;
@@ -52,10 +51,11 @@
 	.glass { @apply bg-white/90 backdrop-blur-sm; }
 	.glass-dark { @apply bg-white/10 backdrop-blur-sm; }
 	.glass-border { @apply border border-white/10; }
+	.glass-border-dark { @apply border border-black/10; }
 
 	.dots {
-		background-image: radial-gradient(theme('colors.gray.200') 1px, transparent 1px);
-		background-size: 0.8rem 0.8rem;
+		background-image: radial-gradient(currentColor 1px, transparent 1px);
+		background-size: 0.9rem 0.9rem;
 	}
 
 	.anim-fade {

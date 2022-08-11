@@ -1,26 +1,40 @@
+<svelte:head>
+	<title>{$page.stuff.site.title.full}</title>
+</svelte:head>
+
 <div class="root grid">
-	<div class="one flex flex-col max-h-screen <md:w-screen md:overflow-hidden">
+	<div class="one flex flex-col md:max-h-screen <md:w-screen md:overflow-hidden">
 		<Header/>
 		<SelectedSticker/>
 		<Recent/>
 	</div>
 
-	<div class="two flex flex-col bg-white text-black <md:w-screen md:overflow-auto md:rounded-l-lg <md:rounded-t-lg">
+	<div class="two flex flex-col bg-white text-ink <md:w-screen md:overflow-auto md:rounded-l-lg <md:rounded-t-lg">
 		<slot></slot>
 	</div>
 </div>
 
 <style>
+	.root {
+		height: 100vh;
+		height: 100svh;
+	}
+
+	.one { grid-area: one; }
+	.two { grid-area: two; }
+
 	@screen md {
 		.root {
 			grid-template-areas: 'one two';
 			grid-template-columns: 350px 1fr;
-			height: 100vh;
-			height: 100svh;
 		}
+	}
 
-		.one { grid-area: one; }
-		.two { grid-area: two; }
+	@screen <md {
+		.root {
+			grid-template-areas: 'one' 'two';
+			grid-template-rows: auto 1fr;
+		}
 	}
 </style>
 
@@ -28,7 +42,8 @@
 	import Header from '$lib/Header.svelte'
 	import Recent from '@/lib/sticker/Recent.svelte'
 	import SelectedSticker from '$lib/sticker/SelectedSticker.svelte'
-	import '../app.css'
+	import { page } from '$app/stores'
+	import '../styles/app.css'
 </script>
 
 <script context="module">

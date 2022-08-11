@@ -1,4 +1,4 @@
-<label class="flex gap-2 items-center <xs:hidden">
+<label class="flex gap-2 items-center text-xs">
 	-
 	<input type="range"
 		bind:value={$sticker_size}

@@ -1,7 +1,7 @@
-<section class="grow relative z-[1] flex flex-col bg-white">
-	<h2 class="h2 p-4">Stickers</h2>
+<section class="grow relative z-[1] flex flex-col">
+	<h2 class="h2 p-4 pb-0">Stickers</h2>
 
-	<div class="grow dots">
+	<div class="grow dots text-gray-300">
 		<div
 			class="grid <xs:!grid-cols-4 gap-2 p-4"
 			class:selected={!!$selected_emoji}
@@ -34,6 +34,17 @@
 
 	.selected button {
 		max-width: var(--size, 100px);
+	}
+
+	button:hover :global(.sticker) {
+		transform-origin: top;
+		animation: hover 0.5s ease-in-out;
+	}
+
+	@keyframes hover {
+		25% { transform: rotate(-5deg); }
+		50% { transform: rotate(4deg); }
+		75% { transform: rotate(-3deg); }
 	}
 </style>
 

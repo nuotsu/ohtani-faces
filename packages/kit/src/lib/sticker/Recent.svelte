@@ -1,5 +1,5 @@
 <section class="h-full overflow-y-auto border-t border-white/20 pt-4 <sm:-order-1">
-	<h2 class="h1 sticky top-0 px-4">Recent additions</h2>
+	<h2 class="h2 sticky top-0 px-4">Recent additions</h2>
 
 	<ul class="grid gap-4 p-4 min-w-0 <md:flex overflow-x-auto scroll-snap">
 		{#each latest as sticker}
@@ -9,8 +9,12 @@
 				</button>
 
 				<div>
-					<p class="text-xl">{sticker.emojis}</p>
-					<p><time datetime={sticker.date}>{date(sticker.date)}</time></p>
+					<p class="text-3xl">
+						{#each runes(sticker.emojis) as emoji}
+							<Emoji {emoji} />
+						{/each}
+					</p>
+					<p><time class="text-xs" datetime={sticker.date}>{date(sticker.date)}</time></p>
 				</div>
 			</li>
 		{/each}
@@ -31,8 +35,10 @@
 <script>
 	import { page } from '$app/stores'
 	import Sticker from './Sticker.svelte'
+	import Emoji from '$lib/emoji/Emoji.svelte'
 	import { selected_sticker } from '@/utils/store'
 	import date from '@/utils/date'
+	import runes from 'runes'
 
 	const { stickers } = $page.stuff
 

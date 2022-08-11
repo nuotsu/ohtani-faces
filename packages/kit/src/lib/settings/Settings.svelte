@@ -1,5 +1,5 @@
-<aside class="sticky bottom-0 z-[1] px-4">
-	<div class="max-w-max ml-auto px-2 glass rounded-lg">
+<aside class="sticky bottom-2 z-[1] mt-4 px-4 <xs:hidden">
+	<div class="_btn max-w-max ml-auto glass glass-border-dark">
 		<StickerSize/>
 	</div>
 </aside>

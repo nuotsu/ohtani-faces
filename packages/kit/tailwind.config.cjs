@@ -3,8 +3,12 @@ module.exports = {
 	content: ['./src/**/*.svelte'],
 	theme: {
 		extend: {
+			fontFamily: {
+				'sans': "'Chakra Petch'",
+			},
 			colors: {
-
+				'accent': '#e00101',
+				'ink': '#011d28',
 			},
 			screens: {
 				'<xs': { max: '428px' },
