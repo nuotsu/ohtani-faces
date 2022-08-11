@@ -42,9 +42,9 @@
 	}
 
 	@keyframes hover {
-		25% { transform: rotate(-5deg); }
-		50% { transform: rotate(4deg); }
-		75% { transform: rotate(-3deg); }
+		25% { transform: rotate(-4deg); }
+		50% { transform: rotate(2deg); }
+		75% { transform: rotate(-2deg); }
 	}
 </style>
 
