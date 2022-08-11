@@ -3,7 +3,7 @@
 		<section class="relative p-4 text-center border-t border-white/20 <sm:order-1">
 			<div class="grid gap-2 anim-fade-r">
 				<button
-					class="absolute top-0 right-0 z-[1]"
+					class="absolute top-0 right-0 z-[1] transition-transform hover:scale-125"
 					on:click={() => $selected_sticker = null}
 				>
 					&times;
