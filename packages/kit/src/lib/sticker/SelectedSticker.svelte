@@ -2,7 +2,7 @@
 	{#key sticker._id}
 		<section
 			id="selected-sticker"
-			class="relative p-4 dots text-white/10 text-center border-t border-white/20 <sm:order-1"
+			class="relative p-4 dots moving text-white/10 text-center border-t border-white/20 <sm:order-1"
 		>
 			<div class="grid gap-2 text-white anim-fade-r">
 				<button

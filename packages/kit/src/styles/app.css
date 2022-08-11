@@ -54,8 +54,17 @@
 	.glass-border-dark { @apply border border-black/10; }
 
 	.dots {
+		--size: 0.9rem;
 		background-image: radial-gradient(currentColor 1px, transparent 1px);
-		background-size: 0.9rem 0.9rem;
+		background-size: var(--size) var(--size);
+	}
+	.dots.moving {
+		animation: moving 1s linear infinite;
+	}
+
+	@keyframes moving {
+		0% { background-position: 0 0; }
+		100% { background-position: var(--size) var(--size); }
 	}
 
 	.anim-fade {
