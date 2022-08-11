@@ -7,10 +7,9 @@
 			class:selected={!!$selected_emoji}
 			style:--size="{$sticker_size}px"
 		>
-			{#each filtered as sticker, i (sticker._id)}
+			{#each filtered as sticker, i (sticker._id + i)}
 				<button
-					class="my-auto"
-					class:anim-fade={!$selected_emoji}
+					class="my-auto anim-fade"
 					class:mx-auto={!$selected_emoji}
 					style:--delay={i}
 					on:click={() => $selected_sticker = sticker}
@@ -69,7 +68,9 @@
 
 	const { stickers } = $page.stuff
 
+	const shuffled = shuffle(stickers)
+
 	$: filtered = !!$selected_emoji
 		? stickers.filter(({ emojis }) => emojis.includes($selected_emoji))
-		: shuffle(stickers)
+		: shuffled
 </script>
