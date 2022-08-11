@@ -7,18 +7,16 @@
 			class:selected={!!$selected_emoji}
 			style:--size="{$sticker_size}px"
 		>
-			{#key filtered}
-				{#each filtered as sticker, i (sticker._id + i)}
-					<button
-						class="my-auto anim-fade"
-						class:mx-auto={!$selected_emoji}
-						style:--delay={i}
-						on:click={() => $selected_sticker = sticker}
-					>
-						<Sticker {sticker} width={300} />
-					</button>
-				{/each}
-			{/key}
+			{#each filtered as sticker, i (sticker._id + i)}
+				<button
+					class="my-auto anim-fade"
+					class:mx-auto={!$selected_emoji}
+					style:--delay={i}
+					on:click={() => $selected_sticker = sticker}
+				>
+					<Sticker {sticker} width={300} />
+				</button>
+			{/each}
 		</div>
 	</div>
 </section>
@@ -72,5 +70,5 @@
 
 	$: filtered = !!$selected_emoji
 		? stickers.filter(({ emojis }) => emojis.includes($selected_emoji))
-		: shuffle(stickers)
+		: stickers
 </script>
