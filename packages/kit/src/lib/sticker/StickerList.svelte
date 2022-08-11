@@ -1,5 +1,9 @@
 <section class="grow relative z-[1] flex flex-col">
-	<h2 class="h2 p-4 pb-0">Stickers</h2>
+	<header class="flex gap-4 items-center p-4 pb-0">
+		<h2 class="h2">Stickers</h2>
+
+		<Shuffle/>
+	</header>
 
 	<div class="grow dots text-gray-300">
 		<div
@@ -7,11 +11,12 @@
 			class:selected={!!$selected_emoji}
 			style:--size="{$sticker_size}px"
 		>
-			{#each filtered as sticker, i (sticker._id + i)}
+			{#each filtered as sticker, i (sticker._id + i + $shuffled)}
 				<button
 					class="my-auto anim-fade"
 					class:mx-auto={!$selected_emoji}
 					style:--delay={i}
+					style:order={$shuffled ? random() : 1}
 					on:click={() => $selected_sticker = sticker}
 				>
 					<Sticker {sticker} width={300} />
@@ -61,14 +66,19 @@
 
 <script>
 	import { page } from '$app/stores'
+	import Shuffle, { shuffled } from './Shuffle.svelte'
 	import Sticker from './Sticker.svelte'
-	import shuffle from '@/utils/shuffle'
 	import { selected_emoji, selected_sticker } from '@/utils/store'
 	import { sticker_size } from '$lib/settings/StickerSize.svelte'
+	import shuffle from '@/utils/shuffle'
 
 	const { stickers } = $page.stuff
 
 	$: filtered = !!$selected_emoji
 		? stickers.filter(({ emojis }) => emojis.includes($selected_emoji))
 		: stickers
+
+	function random() {
+		return Math.floor(Math.random() * filtered.length)
+	}
 </script>
