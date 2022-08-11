@@ -36,8 +36,6 @@
 				</p>
 			</div>
 		</section>
-
-		<SelectedStickerLink />
 	{/key}
 {/if}
 
@@ -47,7 +45,6 @@
 	import Emoji from '../emoji/Emoji.svelte'
 	import Share from './Share.svelte'
 	import Source from './Source.svelte'
-	import SelectedStickerLink from './SelectedStickerLink.svelte'
 	import date from '@/utils/date'
 	import runes from 'runes'
 

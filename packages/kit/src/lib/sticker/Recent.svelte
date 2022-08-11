@@ -4,7 +4,7 @@
 	<ul class="grid gap-4 p-4 min-w-0 <md:flex overflow-x-auto scroll-snap">
 		{#each latest as sticker}
 			<li class="grid gap-4 items-center px-4 rounded-lg glass-dark glass-border">
-				<button class="-mt-4" on:click={() => $selected_sticker = sticker}>
+				<button class="-mt-4" on:click={() => setSticker(sticker)}>
 					<Sticker className="m-auto" {sticker} height={120} />
 				</button>
 
@@ -34,9 +34,8 @@
 
 <script>
 	import { page } from '$app/stores'
-	import Sticker from './Sticker.svelte'
+	import Sticker, { setSticker } from './Sticker.svelte'
 	import Emoji from '$lib/emoji/Emoji.svelte'
-	import { selected_sticker } from '@/utils/store'
 	import date from '@/utils/date'
 	import runes from 'runes'
 

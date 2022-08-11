@@ -17,7 +17,7 @@
 					class:mx-auto={!$selected_emoji}
 					style:--delay={i}
 					style:order={$shuffled ? random() : 1}
-					on:click={() => $selected_sticker = sticker}
+					on:click={() => setSticker(sticker)}
 				>
 					<Sticker {sticker} width={300} />
 				</button>
@@ -67,8 +67,8 @@
 <script>
 	import { page } from '$app/stores'
 	import Shuffle, { shuffled } from './Shuffle.svelte'
-	import Sticker from './Sticker.svelte'
-	import { selected_emoji, selected_sticker } from '@/utils/store'
+	import Sticker, { setSticker } from './Sticker.svelte'
+	import { selected_emoji } from '@/utils/store'
 	import { sticker_size } from '$lib/settings/StickerSize.svelte'
 
 	const { stickers } = $page.stuff
