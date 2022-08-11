@@ -68,7 +68,9 @@
 
 	const { stickers } = $page.stuff
 
+	const shuffled = shuffle(stickers)
+
 	$: filtered = !!$selected_emoji
 		? stickers.filter(({ emojis }) => emojis.includes($selected_emoji))
-		: shuffle(stickers)
+		: shuffled
 </script>
