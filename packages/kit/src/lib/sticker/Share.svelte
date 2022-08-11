@@ -1,5 +1,16 @@
 {#if 'share' in navigator}
-	<button>Share</button>
+	{#await prepareShare(download)}
+		<button class="action" disabled>
+			Loading...
+		</button>
+
+	{:then data}
+		<button class="action" on:click={() => navigator.share(data)}>
+			Share
+		</button>
+
+	{/await}
+
 {:else}
 	<a class="action" href={download}>Download</a>
 {/if}
@@ -14,12 +25,12 @@
 		.forceDownload(sticker.emojis)
 		.url()
 
-	// async function prepareShare() {
-	// 	let response = await fetch(download)
-	// 	let blob = await response.blob()
-	// 	let ext = blob.type.split('image/')[1]
-	// 	let file = new File([blob], `${filename}.${ext}`, { type: blob.type })
+	async function prepareShare(url) {
+		let response = await fetch(url)
+		let blob = await response.blob()
+		let ext = blob.type.split('image/')[1]
+		let file = new File([blob], `${filename}.${ext}`, { type: blob.type })
 
-	// 	return { files: [file] }
-	// }
+		return { files: [file] }
+	}
 </script>

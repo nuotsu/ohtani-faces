@@ -22,6 +22,7 @@
 	.h2 { @apply font-bold; }
 
 	._btn {
+		cursor: pointer;
 		padding: 0.25em 0.5em;
 		border: 1px solid transparent;
 		@apply hover:underline;
