@@ -1,5 +1,5 @@
 {#if 'share' in navigator}
-	{#await prepareShare(download)}
+	{#await prepareShare()}
 		<button class="action" disabled>
 			Loading...
 		</button>
@@ -25,11 +25,11 @@
 		.forceDownload(sticker.emojis)
 		.url()
 
-	async function prepareShare(url) {
-		let response = await fetch(url)
+	async function prepareShare() {
+		let response = await fetch(download)
 		let blob = await response.blob()
 		let ext = blob.type.split('image/')[1]
-		let file = new File([blob], `${filename}.${ext}`, { type: blob.type })
+		let file = new File([blob], `${ sticker.emojis }.${ ext }`, { type: blob.type })
 
 		return { files: [file] }
 	}
